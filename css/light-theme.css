@@ -1,0 +1,75 @@
+colors {
+  --prp-red: #f44336;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+app-drawer prp-nav a paper-item span {
+  color: #000;
+}
+
+app-drawer paper-item:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+
+/* Home Styles */
+
+#blogger h1 {
+  color: #f44336;
+  text-decoration: underline;
+}
+
+#blogger a {
+  color: red;
+  font-weight: bold;
+}
+
+#blogger a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+#datesAndLinks h2 {
+  color: #fff;
+  background-color: #F44336;
+}
+
+#datesAndLinks paper-item,
+#datesAndLinks div {
+  background-color: #fff;
+}
+
+paper-item:hover {
+  background-color: #EEE;
+}
+
+.text {
+  background-color: #fff;
+}
+.DocLink {
+  background-color: #fff;
+}
+
+.helpful {
+  background-color: #fff;
+}
+
+.helpful h3 {
+  color: #fff;
+}
+
+.text p {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.courses:hover {
+  background-color: #fff;
+  ;
+}
+
+.card {
+  background-color: #fff;
+}

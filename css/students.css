@@ -1,0 +1,95 @@
+.item {
+  height: 100px;
+  position: relative;
+  background-position: 0% 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0px;
+  text-shadow: black 0.2em 0.2em 0.2em;
+  color: white;
+  opacity: 1;
+}
+
+.text {
+  padding: 20px;
+}
+
+.fimg {
+  position: relative;
+  background-position: 0% 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0px;
+  text-shadow: black 0.2em 0.2em 0.2em;
+  color: white;
+  opacity: 1;
+}
+
+.item .overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100.1%;
+  height: 100%;
+}
+
+.item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.item .overlay {
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+
+.item h2,
+.item h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  text-shadow: 2px 2px 2px black;
+  padding-left: 20px;
+}
+
+.staff div {
+  padding: 5px 20px;
+}
+
+.staff h3,
+.staff p {
+  margin: 0px
+}
+
+.phone {
+  padding: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .item {
+    height: 150px
+  }
+  .helpful {
+    margin: 10px;
+  }
+  .phone div div {
+    padding: 15px;
+  }
+  .phone > div {
+    margin: 0 auto;
+    box-shadow: 0px 2px 3px rgba(238, 238, 238, 0.5);
+  }
+  .phone > div:hover {
+    background-color: #fff;
+    margin: 5px auto;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  }
+  .phone > div {
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .item {
+    height: 200px;
+  }
+}

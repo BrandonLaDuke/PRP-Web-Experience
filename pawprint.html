@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Paw Print | PRP High School</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content=" #F44336">
+  <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/png" href="images/index-images/PRPcrest.png" />
+
+  <!--Polymer-->
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+  <link rel="import" href="elements/elements.html">
+
+
+  <!--Custom Styles-->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+  <!-- Themes -->
+  <link rel="stylesheet" type="text/css" href="css/light-theme.css">
+
+  <style is="custom-style" include="iron-flex iron-flex-alignment">
+    body {
+      margin: 0;
+      background-color: #eee;
+    }
+    
+    app-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      color: #fff;
+      background-color: #f44336;
+      --app-header-background-front-layer: {
+        background-image: url(images/about-images/panthermascot.png);
+        background-position: center;
+      }
+      ;
+    }
+    
+    paper-icon-button {
+      --paper-icon-button-ink-color: white;
+    }
+    
+    app-toolbar.tall {
+      height: 500px;
+    }
+    
+    [main-title] {
+      font-weight: ;
+      margin-left: 140px;
+      text-shadow: 0.1em 0.1em 0.3em black;
+      margin-top: 1.33em;
+    }
+    
+    [main-title] span {
+      font-size: 0.7em;
+    }
+    
+    [condensed-title] {
+      font-weight: lighter;
+      margin-left: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 1.33em;
+    }
+    
+    [condensed-title] i {
+      font-weight: 200;
+      font-style: normal;
+    }
+    
+    .pawprint-blurb,
+    .twitter {
+      padding: 20px;
+    }
+    
+    .twitter .blog {
+      padding: 20px;
+      background-color: #F44336;
+      color: #fff;
+      position: relative;
+    }
+    
+    .twitter .blog:hover {
+      background-color: #E42326;
+    }
+    
+    .twitter h3 {
+      text-align: center;
+      margin: 0px;
+    }
+    
+    .twitter-timeline {
+      margin-top: 10px;
+    }
+    
+    @media (max-width: 639px) {
+      [main-title] {
+        margin-left: 50px;
+        font-size: 30px;
+      }
+      [condensed-title] {
+        font-size: 15px;
+      }
+      [main-title] span {
+        display: none;
+      }
+    }
+    
+    @media screen and (min-width:800px) {
+      .layout-horizontal {
+        @apply(--layout-horizontal);
+        padding: 5px;
+      }
+      .layout-flex-1 {
+        @apply(--layout-flex);
+      }
+      .layout-flex-2 {
+        @apply(--layout-flex-2);
+      }
+      .layout-flex-3 {
+        @apply(--layout-flex-3);
+      }
+    }
+  </style>
+</head>
+
+<body class="fullbleed" unresolved>
+  <app-drawer-layout fullbleed force-narrow>
+    <app-drawer swipe-Open style="z-index:1;">
+      <div style="height: 100%; overflow: auto;">
+        <prp-nav></prp-nav>
+      </div>
+    </app-drawer>
+    <app-header-layout class="flex" mode="waterfall" main>
+      <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals>
+        <app-toolbar>
+          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <h4 condensed-title>Paw Print</h4>
+          <nav-bar></nav-bar>
+          <span class="flex"></span>
+        </app-toolbar>
+        <app-toolbar class="tall">
+          <h1 main-title>Paw Print</h1>
+        </app-toolbar>
+      </app-header>
+      <div class="site-content">
+        <section class="wrapper layout-horizontal">
+          <div class="pawprint-blurb flex">
+            <iron-image src="images/pawprint/Paw-Print-Logo.jpg"></iron-image>
+            <p>The Paw Print is the official print news source of Pleasure Ridge Park High School. Originally a print newspaper, the publication is evolving to address the realities of a digital age in which news is immediately available. With that in mind, our staff is working to establish an online presence via Twitter and on our blog. We recently created a position for Chief Online Editor, and we are in the process of growing a larger staff who will be responsible for up-to-date online publication.</p>
+            <p>Our print publication is now a features magazine in which we highlight people, places, programs and events relevant to the PRP Community. We publish five, 12-20 page issues of the magazine each school year. This includes the Senior Edition, which is published each May. Each issue is free to PRP students and staff.</p>
+            <p>With the 2015-2016 school year, students will have the opportunity to take Introduction to Print Journalism where they will learn about the elements of journalistic writing and publishing. After taking this course, students may complete an application to serve on the staff of The Paw Print. Students who have not taken the course may also apply, but it is strongly recommended that students take Intro to Print Journalism if they would like to be on the staff. Each March, we begin accepting applications for the following school year, so listen for announcements!</p>
+          </div>
+          <div class="twitter">
+            <a href="https://prppawprint.wordpress.com/">
+              <div class="blog">
+                <h3>Visit The Paw Print Blog</h3>
+                <paper-ripple></paper-ripple>
+              </div>
+            </a>
+            <a class="twitter-timeline" href="https://twitter.com/PRPPawPrint" data-widget-id="601760628991250432">Tweets by @PRPPawPrint</a>
+          </div>
+        </section>
+      </div>
+
+      <prp-footer></prp-footer>
+
+    </app-header-layout>
+  </app-drawer-layout>
+  <script>
+    ! function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+      if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + "://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }
+    }(document, "script", "twitter-wjs");
+  </script>
+</body>
+
+</html>

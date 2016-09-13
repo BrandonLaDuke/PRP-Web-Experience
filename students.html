@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Students | PRP High School</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F44336">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/png" href="images/index-images/PRPcrest.png" />
+  <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
+
+  <!-- Polymer Custom Elements -->
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+  <link rel="import" href="elements/elements.html">
+
+  <!--Custom Styles-->
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/students.css">
+
+  <!-- Themes -->
+  <link rel="stylesheet" type="text/css" href="css/light-theme.css">
+
+  <style is="custom-style" include="iron-flex iron-flex-alignment">
+    body {
+      margin: 0;
+      background-color: #eee;
+    }
+    
+    app-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      color: #fff;
+      background-color: #f44336;
+      --app-header-background-front-layer: {
+        background-image: url(images/athletics/cheerleading/cheer.jpg);
+        background-position: center;
+      }
+      ;
+    }
+    
+    paper-icon-button {
+      --paper-icon-button-ink-color: white;
+    }
+    
+    app-toolbar.tall {
+      height: 500px;
+    }
+    
+    [main-title] {
+      font-weight: ;
+      margin-left: 140px;
+      text-shadow: 0.1em 0.1em 0.3em black;
+      margin-top: 1.33em;
+    }
+    
+    [main-title] span {
+      font-size: 0.7em;
+    }
+    
+    [condensed-title] {
+      font-weight: lighter;
+      margin-left: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 1.33em;
+    }
+    
+    [condensed-title] i {
+      font-weight: 200;
+      font-style: normal;
+    }
+    
+    @media (max-width: 639px) {
+      [main-title] {
+        margin-left: 50px;
+        font-size: 30px;
+      }
+      [condensed-title] {
+        font-size: 15px;
+      }
+      [main-title] span {
+        display: none;
+      }
+    }
+    
+    @media screen and (min-width:800px) {
+      .layout-horizontal {
+        @apply(--layout-horizontal);
+      }
+      .layout-vertical {
+        @apply(--layout-vertical);
+      }
+      .layout-flex-1 {
+        @apply(--layout-flex);
+      }
+      .layout-flex-2 {
+        @apply(--layout-flex-2);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <app-drawer-layout force-narrow>
+    <app-drawer swipe-Open style="z-index:1;">
+      <div style="height: 100%; overflow: auto;">
+        <prp-nav></prp-nav>
+      </div>
+    </app-drawer>
+    <app-header-layout class="flex" mode="waterfall" main>
+      <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals>
+        <app-toolbar>
+          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <h4 condensed-title>Students</h4>
+          <nav-bar></nav-bar>
+          <span class="flex"></span>
+        </app-toolbar>
+        <app-toolbar class="tall">
+          <h1 main-title>Students</h1>
+        </app-toolbar>
+      </app-header>
+      <br>
+      <br>
+      <div class="site-content">
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <a class="layout-flex-1" href="#">
+              <div class="item" style="background-image:url(images/athletics/archery.jpg);">
+                <div class="overlay">
+                  <h2>Study Skills</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            <a class="layout-flex-1" href="#">
+              <div class="item" style="background-image:url(images/athletics/baseball.jpg);">
+                <div class="overlay">
+                  <h2>Library</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            <a class="layout-flex-1" href="#">
+              <div class="item" style="background-image:url(images/athletics/basketball.jpg);">
+                <div class="overlay">
+                  <h2>Organizations and Clubs</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="layout-horizontal">
+            <a class="layout-flex-1" href="#">
+              <div class="item" style="background-image:url(http://schools.jefferson.kyschools.us/High/PleasureRidgePark/images/photos/Chamber%20Choir.JPG);">
+                <div class="overlay">
+                  <h2>PTSA</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            <a class="layout-flex-1" href="#">
+              <div class="item" style="background-image:url(images/athletics/bowling.jpeg);">
+                <div class="overlay">
+                  <h2>Youth Services Center</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            <a class="layout-flex-1" href="#">
+              <div class="item" style="background-image:url(images/athletics/cheer.JPG);">
+                <div class="overlay">
+                  <h2>Newsletters</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+        <br>
+        <br>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-2 text">
+              <h1>Individual Learning Plan</h1>
+              <h2>What is the Individual Learning Plan (ILP)?</h2>
+              <p>Students across Kentucky are required to complete or revise their ILP each year of high school. Seneca has adopted a School-Based Decision Making (SBDM) policy stating that ILP completion is a requirement of promotion to the next grade as well as graduation.</p>
+              <a href="">
+                <paper-button raised>
+                  ILP
+                </paper-button>
+              </a>
+            </div>
+            <div class="layout-flex-1 fimg" style="background-image:url(http://schools.jefferson.kyschools.us/High/PleasureRidgePark/images/photos/VisualArtStudentsPainting.jpg);"></div>
+          </div>
+        </section>
+        <br>
+        <br>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-1 fimg" style="background-image:url(http://schools.jefferson.kyschools.us/High/PleasureRidgePark/images/photos/2014%20photos/jennings1.gif);">
+
+            </div>
+            <div class="layout-flex-2 text">
+              <h1>Preparing for Your Future</h1>
+              <h2>Life After High School</h2>
+              <p>Life After High School is produced by JCPS counselors to help juniors plan for their lives after high school graduation. It's a great tool not only for juniors but for seniors as they begin the process of applying for college.</p>
+            </div>
+          </div>
+          <div class="layout-horizontal">
+            <a class="layout-flex-1" href="#">
+              <div class="item" style="background-image:url(http://schools.jefferson.kyschools.us/High/PleasureRidgePark/images/photos/_JR36359.jpg);">
+                <div class="overlay">
+                  <h3>Ten Things You Should Consider When Choosing a College</h3>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            <a class="layout-flex-1" href="#">
+              <div class="item" style="background-image:url(http://schools.jefferson.kyschools.us/High/PleasureRidgePark/images/photos/IMG_8145.jpg);">
+                <div class="overlay">
+                  <h3>Guide to Choosing a College or University, Choosing a Major or Career, and Finding Scholarships</h3>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            <a class="layout-flex-1" href="#">
+              <div class="item" style="background-image:url(http://schools.jefferson.kyschools.us/High/PleasureRidgePark/images/photos/102_1183.jpg);">
+                <div class="overlay">
+                  <h3>Kentucky Educational Excellence Scholarship (KEES)</h3>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+        <br>
+        <br>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-1 text">
+              <h1>Intercollegiate Athletics</h1>
+            </div>
+            <a class="layout-flex-2" href="#">
+              <div class="item" style="background-image:url(http://schools.jefferson.kyschools.us/High/PleasureRidgePark/images/photos/PRP_BlackHole.jpg);">
+                <div class="overlay">
+                  <h3>National Association of Intercollegiate Athletics (NAIA)</h3>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            <a class="layout-flex-2" href="#">
+              <div class="item" style="background-image:url(http://schools.jefferson.kyschools.us/High/PleasureRidgePark/images/photos/102_1239.jpg);">
+                <div class="overlay">
+                  <h3>National Collegiate Athletic Association (NCAA)</h3>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+        <br>
+        <section class="wrapper ">
+          <h1 style="padding:10px;">Helpful Websites and Phone Numbers</h1>
+          <div class="layout-horizontal">
+            <div class="layout-flex-1">
+              <paper-material class="helpful">
+                <div style="background-color:#F44336">
+                  <center>
+                    <h3 style="padding:15px; margin-bottom:0">College Planning</h3>
+                  </center>
+                </div>
+                <div>
+
+                  <a href="">
+                    <paper-item>
+                      College Answer
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      The College Board
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      EducationPlanner.org
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Mapping Your Future
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      My College Guide
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Princeton Review
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      OffToCollege.com
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Peterson's
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Scholarship Experts
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      U.S. Department of Education
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Upromise
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Xap
+                    </paper-item>
+                  </a>
+
+                </div>
+                <div style="background-color:#F44336">
+                  <center>
+                    <h3 style="padding:15px; margin-bottom:0">Career Assessment</h3>
+                  </center>
+                </div>
+                <div>
+
+                  <a href="">
+                    <paper-item>
+                      Monster
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Today's Military
+                    </paper-item>
+                  </a>
+                </div>
+
+              </paper-material>
+            </div>
+            <div class="layout-flex-1">
+              <paper-material class="helpful">
+                <div style="background-color:#F44336">
+                  <center>
+                    <h3 style="padding:15px; margin-bottom:0">Student Loans</h3>
+                  </center>
+                </div>
+                <div>
+
+                  <a href="">
+                    <paper-item>
+                      CHASE
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Sallie Mae
+                    </paper-item>
+                  </a>
+                </div>
+                <div>
+                  <div style="background-color:#F44336">
+                    <center>
+                      <h3 style="padding:15px; margin-bottom:0">U.S. Department of Education</h3>
+                    </center>
+                  </div>
+
+                  <a href="">
+                    <paper-item>
+                      FAFSA on the Web
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      FAFSA PIN Registration
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Students
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Parents
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Teachers
+                    </paper-item>
+                  </a>
+
+
+
+                </div>
+                <div style="background-color:#F44336">
+                  <center>
+                    <h3 style="padding:15px; margin-bottom:0">Scholarship Search</h3>
+                  </center>
+                </div>
+                <div>
+
+                  <a href="">
+                    <paper-item>
+                      College Answer
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      FastWeb
+                    </paper-item>
+                  </a>
+                  <a href="">
+                    <paper-item>
+                      Military.com
+                    </paper-item>
+                  </a>
+                  <a href="">
+                    <paper-item>
+                      Scholarship Experts
+                    </paper-item>
+                  </a>
+                </div>
+
+              </paper-material>
+            </div>
+            <div class="layout-flex-1">
+              <paper-material class="helpful">
+                <div style="background-color:#F44336">
+                  <center>
+                    <h3 style="padding:15px; margin-bottom:0">Federal Government</h3>
+
+                  </center>
+                </div>
+                <div>
+                  <a href="https://www.irs.gov/">
+                    <paper-item>
+                      Citizenship and Immigration Service
+                    </paper-item>
+                  </a>
+
+                  <a href="https://www.irs.gov/">
+                    <paper-item>
+                      Internal Revenue Service
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      Selective Service System
+                    </paper-item>
+                  </a>
+                  <a href="">
+                    <paper-item>
+                      Social Security Administration
+                    </paper-item>
+                  </a>
+                  <a href="">
+                    <paper-item>
+                      Postal Service
+                    </paper-item>
+                  </a>
+                </div>
+                <div>
+                  <div style="background-color:#F44336">
+                    <center>
+                      <h3 style="padding:15px; margin-bottom:0">Test Prep</h3>
+                    </center>
+                  </div>
+
+                  <a href="">
+                    <paper-item>
+                      ACT
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      CLEP, PSAT and SAT
+                    </paper-item>
+                  </a>
+
+                  <a href="">
+                    <paper-item>
+                      TOEFL
+                    </paper-item>
+                  </a>
+
+
+
+                </div>
+                <div style="background-color:#F44336">
+                  <center>
+                    <h3 style="padding:15px; margin-bottom:0">Military</h3>
+                  </center>
+                </div>
+
+                <a href="">
+                  <paper-item>
+                    The American Legion
+                  </paper-item>
+                </a>
+
+                <a href="">
+                  <paper-item>
+                    Montgomery GI Bill
+                  </paper-item>
+                </a>
+
+                <a href="">
+                  <paper-item>
+                    Veterans Affairs
+                  </paper-item>
+                </a>
+
+              </paper-material>
+            </div>
+          </div>
+        </section>
+        <section class="wrapper phone">
+          <div class="layout-horizontal">
+            <div class="layout-flex-1">
+              <h3>Internal Revenue Service (IRS)</h3>
+            </div>
+            <div class="layout-flex-1">
+              <a href="tel:+18008291040">800-829-1040</a>
+            </div>
+            <div class="layout-flex-1">
+              <p></p>
+            </div>
+          </div>
+          <div class="layout-horizontal">
+            <div class="layout-flex-1">
+              <h3>Selective Service</h3>
+            </div>
+            <div class="layout-flex-1">
+              <a href="tel:+18476886888">847-688-6888</a>
+            </div>
+            <div class="layout-flex-1">
+              <p></p>
+            </div>
+          </div>
+          <div class="layout-horizontal">
+            <div class="layout-flex-1">
+              <h3>Social Security Administration</h3>
+            </div>
+            <div class="layout-flex-1">
+              <a href="tel:+18007721213">800-772-1213</a>
+            </div>
+            <div class="layout-flex-1">
+              <p>TTY: <a href="tel:+18003250778">800-325-0778</a></p>
+            </div>
+          </div>
+          <div class="layout-horizontal">
+            <div class="layout-flex-1">
+              <h3>U.S. Department of Education Federal Student Financial Aid Information Center</h3>
+            </div>
+            <div class="layout-flex-1">
+              <a href="tel:+18004333243">800-4-FED-AID<br><br>800-433-3243</a>
+            </div>
+            <div class="layout-flex-1">
+              <p>TTD: <a href="tel:+18007308913">800-730-8913</a></p>
+            </div>
+          </div>
+          <div class="layout-horizontal">
+            <div class="layout-flex-1">
+              <h3>SAR Information</h3>
+            </div>
+            <div class="layout-flex-1">
+              <a href="tel:+13193375665">319-337-5665</a>
+            </div>
+            <div class="layout-flex-1">
+              <p></p>
+            </div>
+          </div>
+          <div class="layout-horizontal">
+            <div class="layout-flex-1">
+              <h3>U.S. Citizenship and Immigration Service (USCIS)</h3>
+            </div>
+            <div class="layout-flex-1">
+              <a href="tel:+18008703676">800-870-3676</a>
+            </div>
+            <div class="layout-flex-1">
+              <p></p>
+            </div>
+          </div>
+          <div class="layout-horizontal">
+            <div class="layout-flex-1">
+              <h3>U.S. Postal Service</h3>
+            </div>
+            <div class="layout-flex-1">
+              <a href="tel:+18002758777">800-ASK-USPS<br><br>800-275-8777</a>
+            </div>
+            <div class="layout-flex-1">
+              <p></p>
+            </div>
+          </div>
+          <div class="layout-horizontal">
+            <div class="layout-flex-1">
+              <h3>U.S. State Department</h3>
+            </div>
+            <div class="layout-flex-1">
+              <a href="tel:+12026474000">202-647-4000</a>
+            </div>
+            <div class="layout-flex-1">
+              <p></p>
+            </div>
+          </div>
+          <div class="layout-horizontal">
+            <div class="layout-flex-1">
+              <h3>Veterans Affairs Administration</h3>
+            </div>
+            <div class="layout-flex-1">
+              <a href="tel:+18008271000">800-827-1000</a>
+            </div>
+            <div class="layout-flex-1">
+              <p></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-1 text">
+              <h1>Other Documents and Links</h1>
+            </div>
+            <div class="DocLink layout-flex-2">
+              <div class="layout-vertical">
+                <a href="#">
+                  <paper-item>
+                    2016 / 2017 Schedule book
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    No Pass No Drive Law - Kentucky
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    Bus Finder
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    Student Handbook
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <prp-footer></prp-footer>
+
+    </app-header-layout>
+  </app-drawer-layout>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-ripple/paper-ripple.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+
+<dom-module id="prp-nav">
+
+  <style>
+    paper-item {
+      color: #fff;
+      position: relative;
+    }
+  </style>
+
+  <template>
+    <template is="dom-repeat" items="{{sections}}">
+      <div id="menuItem">
+        <a href="{{item.link}}">
+          <paper-item class="relative">
+            <span>{{item.title}}</span>
+            <paper-ripple></paper-ripple>
+          </paper-item>
+        </a>
+      </div>
+    </template>
+  </template>
+
+
+  <script>
+    Polymer({
+      is: 'prp-nav',
+      ready: function () {
+        this.sections = [
+          {
+            title: "Home",
+            link: "http://brandonladuke.com/beta/PRP%20Web%20Experience%20beta/index.html",
+          }, {
+            title: "About Us",
+            link: "http://brandonladuke.com/beta/PRP%20Web%20Experience%20beta/about.html",
+          }, {
+            title: "Academics",
+            link: "http://brandonladuke.com/beta/PRP%20Web%20Experience%20beta/academics.html",
+          }, {
+            title: "Athletics",
+            link: "http://brandonladuke.com/beta/PRP%20Web%20Experience%20beta/athletics.html",
+          }, {
+            title: "Students",
+            link: "http://brandonladuke.com/beta/PRP%20Web%20Experience%20beta/students.html",
+          }, {
+            title: "Staff",
+            link: "http://brandonladuke.com/beta/PRP%20Web%20Experience%20beta/staff.html",
+          }, {
+            title: "Parents",
+            link: "#",
+          }, {
+            title: "Counselors",
+            link: "#",
+          }, {
+            title: "Theatre",
+            link: "http://prpfinearts.weebly.com",
+          }, {
+            title: "Panther Media",
+            link: "#",
+          }, {
+            title: "Art",
+            link: "#",
+          }, {
+            title: "PRP Pulse",
+            link: "#",
+          }, {
+            title: "Paw Print",
+            link: "http://brandonladuke.com/beta/PRP%20Web%20Experience%20beta/pawprint.html",
+          },
+        ]
+      }
+    });
+  </script>
+
+</dom-module>

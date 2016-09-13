@@ -1,0 +1,94 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<dom-module id="science-courses">
+
+  <style is="custom-style">
+    @media screen and (min-width:800px) {
+      .layout-horizontal {
+        @apply(--layout-horizontal);
+        padding: 5px;
+      }
+      .layout-flex-1 {
+        @apply(--layout-flex);
+      }
+      .layout-flex-2 {
+        @apply(--layout-flex-2);
+      }
+      .layout-flex-3 {
+        @apply(--layout-flex-3);
+      }
+    }
+  </style>
+
+  <template>
+    <template is="dom-repeat" items="{{sections}}">
+      <section class="wrapper courses layout-horizontal">
+        <div class="layout-flex-2">
+          <h3>{{item.course}}</h3>
+        </div>
+        <div class="layout-flex-3">
+          <p>{{item.description}}</p>
+        </div>
+        <div class="layout-flex-1">
+          <p>{{item.credits}}</p>
+        </div>
+        <div class="layout-flex-1">
+          <p>{{item.grades}}</p>
+        </div>
+        <div class="layout-flex-2">
+          <p>{{item.sections}}</p>
+        </div>
+      </section>
+    </template>
+  </template>
+
+
+  <script>
+    Polymer({
+      is: 'science-courses',
+      ready: function () {
+        this.sections = [
+          {
+            course: "Integrated Science",
+            description: "Course Description...",
+            credits: "Credits: 1",
+            grades: "Grades 9",
+            sections: "Regular, Honors",
+          }, {
+            course: "Biology 1",
+            description: "Course Description...",
+            credits: "Credits: 1",
+            grades: "Grade 9, 10",
+            sections: "Regular, Honors, Advance",
+          }, {
+            course: "Chemistry 1",
+            description: "Course Description...",
+            credits: "Credits: 1",
+            grades: "Grade 10, 11",
+            sections: "Regular, Honors, Advance",
+          }, {
+            course: "Anatomy and Physiology",
+            description: "Course Description...",
+            credits: "Credits: 1",
+            grades: "Grade 11, 12",
+            sections: "Honors, Advance, AP",
+          }, {
+            course: "Physics",
+            description: "Course Description...",
+            credits: "Credits: 1",
+            grades: "Grade 11, 12",
+            sections: "Honors, Advance, AP",
+          }, {
+            course: "AP Physics 2",
+            description: "Course Description...",
+            credits: "Credits: 1",
+            grades: "Grade 11, 12",
+            sections: "Advance, AP",
+          },
+        ]
+      }
+    });
+  </script>
+
+</dom-module>

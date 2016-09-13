@@ -1,0 +1,536 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+<dom-module id="staff-dir">
+
+  <style is="custom-style">
+      .name h3 {
+      font-family: 'Product Sans', sans-serif;
+    }
+    
+    @media screen and (min-width:700px) {
+      .layout-horizontal {
+        @apply(--layout-horizontal);
+        padding: 10px;
+      }
+      .name {
+        @apply(--layout-flex);
+      }
+      .dept {
+        @apply(--layout-flex-2);
+      }
+    }
+    
+    @media screen and (min-width:800px) {
+      .layout-horizontal {
+        @apply(--layout-horizontal);
+        padding: 10px;
+      }
+      .name {
+        @apply(--layout-flex);
+      }
+      .website {
+        @apply(--layout-flex);
+      }
+      .dept {
+        @apply(--layout-flex-2);
+      }
+      .email {
+        @apply(--layout-flex-2);
+      }
+  </style>
+
+
+
+  <template>
+    <template is="dom-repeat" items="{{sections}}">
+      <section class="wrapper staff layout-horizontal">
+        <div class="name">
+          <h3>{{item.firstName}} {{item.lastName}}</h3>
+        </div>
+        <div class="dept">
+          <p>{{item.department}}</p>
+        </div>
+        <div class="email">
+          <a href="mailto:{{item.email}}">{{item.email}}</a>
+        </div>
+        <div class="website">
+          <a href="{{item.teacherWebsiteURL}}">{{item.teacherWebsiteName}}</a>
+        </div>
+      </section>
+    </template>
+  </template>
+
+
+  <script>
+    Polymer({
+      is: 'staff-dir',
+      ready: function () {
+        this.sections = [
+          {
+            firstName: "Cindy",
+            lastName: "Allen",
+            department: "Social Studies",
+            email: "cindy.allen@jefferson.kyschools.us",
+            teacherWebsite: ""
+          }, {
+            firstName: "Linda",
+            lastName: "Allen",
+            department: "Exceptional Child Education (ECE) Instructional Assistant",
+            email: "linda.allen@jefferson.kyschools.us",
+            teacherWebsite: "",
+          }, {
+            firstName: "Tammy",
+            lastName: "Ashby",
+            department: "Food Service",
+            email: "tammy.ashby@jefferson.kyschools.us",
+          }, {
+            firstName: "Alyssa",
+            lastName: "Baer",
+            department: "Social Studies",
+            email: "alyssa.baer@jefferson.kyschools.us",
+          }, {
+            firstName: "Mirza",
+            lastName: "Baig",
+            department: "Math",
+            email: "mirza.baig@jefferson.kyschools.us",
+          }, {
+            firstName: "Janet",
+            lastName: "Baker",
+            department: "Custodian",
+            email: "janet.baker@jefferson.kyschools.us",
+          }, {
+            firstName: "Audra",
+            lastName: "Barnett",
+            department: "English",
+            email: "audra.barnett@jefferson.kyschools.us",
+          }, {
+            firstName: "Aaron",
+            lastName: "Bassham",
+            department: "Math",
+            email: "aaron.bassham@jefferson.kyschools.us",
+          }, {
+            firstName: "Jamie",
+            lastName: "Baxter",
+            department: "Louisville Education and Employment Partnership (LEEP)",
+            email: "jamie.baxter@jefferson.kyschools.us",
+          }, {
+            firstName: "Michael",
+            lastName: "Baxter",
+            department: "Math/Assistant Coach",
+            email: "mike.baxter@jefferson.kyschools.us",
+          }, {
+            firstName: "Tina",
+            lastName: "Bell",
+            department: "English",
+            email: "tina.bell@jefferson.kyschools.us",
+          }, {
+            firstName: "Sherman",
+            lastName: "Blaszczyk",
+            department: "Health/Physical Education (PE)/Assistant Coach",
+            email: "sherm.blaszczyk@jefferson.kyschools.us",
+          }, {
+            firstName: "Jennifer",
+            lastName: "Bode",
+            department: "Social Studies/Class Sponsor",
+            email: "jennifer.bode@jefferson.kyschools.us",
+          }, {
+            firstName: "Phil",
+            lastName: "Bohannon",
+            department: "Instructor III / STC",
+            email: "phill.bohannon@jefferson.kyschools.us",
+          }, {
+            firstName: "Jonna",
+            lastName: "Bowers",
+            department: "English",
+            email: "joanna.bowers@jefferson.kyschools.us",
+          }, {
+            firstName: "Mark",
+            lastName: "Bramer",
+            department: "Technology—Graphic Arts",
+            email: "mark.bramer@jefferson.kyschools.us",
+          }, {
+            firstName: "Brent",
+            lastName: "Braun",
+            department: "Humanities/Department Chair/Drama/Yearbook Sponsor",
+            email: "brent.braun@jefferson.kyschools.us",
+          }, {
+            firstName: "Nicki",
+            lastName: "Bright",
+            department: "ECE Instructional Assistant",
+            email: "nicki.bright@jefferson.kyschools.us",
+          }, {
+            firstName: "Carol",
+            lastName: "Buckingham",
+            department: "Teacher / Eschool Lab",
+            email: "carol.buckingham@jefferson.kyschools.us",
+          }, {
+            firstName: "Burnell",
+            lastName: "Debra",
+            department: "Band",
+            email: "debra.burnell@jefferson.kyschools.us",
+          }, {
+            firstName: "Capo",
+            lastName: "Kellie",
+            department: "ECE Math/Dance Team",
+            email: "kellie.capo@jefferson.kyschools.us",
+          }, {
+            firstName: "Tammy",
+            lastName: "Cate",
+            department: "ECE Instructional Assistant",
+            email: "tamberly.cate@jefferson.kyschools.us",
+          }, {
+            firstName: "Linda",
+            lastName: "Clemons",
+            department: "Lunchroom",
+            email: "linda.clemons@jefferson.kyschools.us",
+          }, {
+            firstName: "Jason",
+            lastName: "Cook",
+            department: "Counselor",
+            email: "jason.cook@jefferson.kyschools.us",
+          }, {
+            firstName: "Karen",
+            lastName: "Coomes",
+            department: "Home/School Coordinator",
+            email: "karen.coomes@jefferson.kyschools.us",
+          }, {
+            firstName: "Rebekah",
+            lastName: "Craig",
+            department: "Attendance",
+            email: "rebekah.craig@jefferson.kyschools.us",
+          }, {
+            firstName: "Jimmy",
+            lastName: "Dawson",
+            department: "Counselor—Ninth Grade",
+            email: "jim.dawson@jefferson.kyschools.us",
+          }, {
+            firstName: "Clarence",
+            lastName: "DeLong",
+            department: "ECE Teacher/Step Team Sponsor",
+            email: "clarence.delong@jefferson.kyschools.us",
+          }, {
+            firstName: "Adam",
+            lastName: "Donnelly",
+            department: "Health/PE/Coach",
+            email: "adam.donnelly@jefferson.kyschools.us"
+          }, {
+            firstName: "Mary",
+            lastName: "Dunn",
+            department: "Business - Multimedia; Communications",
+            email: "mary.dunn@jefferson.kyschools.us",
+            teacherWebsiteName: "Teacher Web Site",
+            teacherWebsiteURL: "http://panthermedia-dunnprp.blogspot.com",
+          }, {
+            firstName: "Samuel",
+            lastName: "Ellis",
+            department: "Math",
+            email: "samuel.ellis@jefferson.kyschools.us",
+          }, {
+            firstName: "Juan",
+            lastName: "Espanola",
+            department: "Spanish",
+            email: "juan.espanola@jefferson.kyschools.us",
+          }, {
+            firstName: "Brandon",
+            lastName: "Fey",
+            department: "Math",
+            email: "brandon.fey@jefferson.kyschools.us",
+          }, {
+            firstName: "Barbara",
+            lastName: "Fields",
+            department: "Custodian",
+            email: "barbara.fields3@jefferson.kyschools.us",
+          },
+          /*{
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   }, {
+                     firstName: "",
+                     lastName: "",
+                     department: "",
+                     email: "",
+                   },*/
+        ]
+      }
+    });
+  </script>
+
+</dom-module>

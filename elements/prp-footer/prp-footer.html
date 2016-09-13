@@ -1,0 +1,145 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="prp-footer">
+
+  <style>
+    img {
+      width: 100%;
+    }
+    
+    footer {
+      background-color: #F44336;
+      color: #fff;
+      padding-top: 10px;
+      bottom: 0;
+    }
+    
+    footer a {
+      color: #fff;
+    }
+    
+    footer a:hover {
+      color: #F44336;
+    }
+    
+    .foot {
+      margin-top: 10px;
+      background-color: #000;
+    }
+    
+    .footer-call {
+      text-align: center;
+    }
+    
+    .foot paper-button {
+      color: #fff;
+      background-color: #F44336;
+    }
+    
+    .foot-container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    
+    .footer-text {
+      padding: 20px 0px;
+      margin: 0px;
+    }
+    
+    .footer-text p {
+      margin: 0px;
+    }
+    
+    .jcps-logo {
+      width: 150px;
+    }
+    
+    @media screen and (max-width: 999px) {
+      .footer-text span {
+        display: none;
+      }
+      .footer-text {
+        text-align: center;
+      }
+      .jcps-logo {
+        margin: auto;
+      }
+      .ext-img {
+        display: none;
+      }
+    }
+    
+    @media screen and (min-width: 1000px) {
+      .footer-text {
+        display: inline-block;
+        width: 80%;
+      }
+      .foot-container {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+      }
+      .clear {
+        clear: both;
+      }
+      .footer-call {
+        display: none;
+      }
+      .jcps-logo {
+        display: inline-block;
+        max-height: 100px;
+        width: 150px;
+        float: right
+      }
+      .jcps-logo img {
+        vertical-align: middle;
+      }
+      .paddingfoot {
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      @media screen and (min-width: 1400px) {
+        .footer-text {
+          width: 75%;
+        }
+      }
+    }
+  </style>
+
+  <template>
+    <br>
+    <footer>
+      <div class="foot">
+        <div class="foot-container paddingfoot">
+          <div class="footer-call">
+            <a href="tel:+15024858311">
+              <paper-button>
+                <iron-icon icon="communication:phone"></iron-icon> Call PRP
+              </paper-button>
+            </a>
+          </div>
+          <div class="footer-text">
+            <p>Pleasure Ridge Park High School | 5901 Greenwood Road, Louisville, Kentucky 40258<span> | <a href="tel:15024858311">+1 (502) 485-8311</a></span></p>
+            <p><a href="">Home</a> | <a href="">About</a> | <a href="">Academics</a> | <a href="">Athletics</a> | <a href="">Students</a> | <a href="">Staff</a> | <a href="">Parents</a> | <a href="">Counselors</a> | <a href="">Alumni</a> | <a href="">SBDM</a> | <a href="">PTSA</a></p>
+            <p style="font-size:.80em; padding-top:4px">Web Design: <a href="http://www.brandonladuke.com">Brandon LaDuke</a></p>
+          </div>
+
+          <div class="jcps-logo">
+            <a href="http://www.jefferson.k12.ky.us/">
+              <img src="../../images/index-images/footer-prp-jcps.png" />
+            </a>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </footer>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'prp-footer',
+    });
+  </script>
+
+</dom-module>

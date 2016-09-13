@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>PRP High School</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F44336">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/png" href="images/index-images/PRPcrest.png" />
+  <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
+
+  <!-- Polymer Custom Elements -->
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+  <link rel="import" href="elements/elements.html">
+  <link rel="import" href="elements/ridge-talk.html">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/ridge-talk.css">
+
+  <!-- Themes -->
+  <link rel="stylesheet" type="text/css" href="css/light-theme.css">
+  <style is="custom-style" include="iron-flex iron-flex-alignment">
+    @media screen and (min-width:700px) {
+      .flex-horizontal-with-ratios {
+        @apply(--layout-horizontal);
+      }
+      .flexchild {
+        @apply(--layout-flex);
+      }
+      .flex2child {
+        @apply(--layout-flex-2);
+      }
+      .flex3child {
+        @apply(--layout-flex-3);
+      }
+    }
+  </style>
+
+</head>
+
+<body style="min-height:100%;">
+  <app-drawer-layout fullbleed force-narrow>
+    <app-drawer swipe-Open style="z-index:1;">
+      <div style="height: 100%; overflow: auto;">
+        <prp-nav></prp-nav>
+        <!-- PRP Navigation is a custom element served from "elements/prp-nav/prp-nav.html" -->
+      </div>
+    </app-drawer>
+    <app-header-layout>
+
+      <app-header reveals>
+        <app-toolbar sticky>
+          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <div main-title>PRP High School</div>
+          <nav-bar></nav-bar>
+          <span class="flex"></span>
+        </app-toolbar>
+      </app-header>
+      <!-- Start Main Content -->
+      <div class="site-content">
+        <section class="hero">
+          <img src="images/carousel/PRP-Website-Banner.jpg" alt="PRP Banner" />
+        </section>
+        <section class="wrapper">
+          <div class="flex-horizontal-with-ratios">
+            <div class="flexchild">
+              <div id="ridgeTalk">
+                <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+                <img src="images/index-images/ridgetalk-logo.jpg" alt="Ridge Talk" />
+                <div id="blogger" class="text"></div>
+                <script>
+                  function handleResponse(response) {
+                    document.getElementById("blogger").innerHTML += "<h1>" + response.items[0].title + "</h1>" + "<div>" + response.items[0].content + "</div>";
+                  }
+                </script>
+                <script src="https://www.googleapis.com/blogger/v3/blogs/3902757048421313088/posts?fetchBodies=true&fetchImages=true&maxResults=1&callback=handleResponse&key=AIzaSyBAQcQQbVHdN4wFbxRT43LOyUaGTjXnfLU"></script>
+              </div>
+
+            </div>
+            <div class="flexchild">
+              <div style="column-count:2;column-gap:0px;">
+                <div class="">
+                  <a href="#">
+                    <img src="images/index-images/Parent-Portal.jpg" alt="Parent Portal" />
+                  </a>
+                </div>
+                <div class="">
+                  <a href="#">
+                    <img src="images/index-images/library-button.jpg" alt="Library" />
+                  </a>
+                </div>
+                <div class="">
+                  <a href="#">
+                    <img src="images/index-images/prpcreative.png" alt="PRP Creative" />
+                  </a>
+                </div>
+                <div class="">
+                  <a href="#">
+                    <img src="images/index-images/pulse.jpg" alt="Pulse" />
+                  </a>
+                </div>
+              </div>
+
+              <div id="pantherMedia">
+                <div><img src="images/index-images/panthermedia-logo.jpg" alt="Panther Media" /></div>
+                <iframe width="100%;" height="270px" src="https://www.youtube.com/embed/videoseries?list=PL3uzMjHUG0jF_BsTVRp7EWkkDU1UIrGiu" frameborder="0" allowfullscreen></iframe>
+              </div>
+
+              <div id="dates_links">
+
+                <paper-material elevation="1" id="datesAndLinks">
+                  <h2 style="margin-top:8px; text-align:center;">Important Dates &amp; Links</h2>
+                  <hr>
+                  <div class="datesAndLinks">
+                    <a href="">
+                      <paper-item>Senior Newsletter - November / December</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>PRP Student Handbook</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>Registration Fees</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>Senior Newsletter - September</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>Attendance and School Activities</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>PRP's Library Website</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>PRP Pulse Student Magazine</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>School Report Card</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>JCPS Parent Portal</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>PRP Art Department</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>Suicide Prevention Letter</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>SBDM Minutes</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>JCPS Parent Portal</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>PRP PTSA</paper-item>
+                    </a>
+                    <a href="">
+                      <paper-item>Video: PRP It's My School</paper-item>
+                    </a>
+                  </div>
+                </paper-material>
+
+              </div>
+            </div>
+          </div>
+        </section>
+        <prp-footer></prp-footer>
+
+      </div>
+      <!-- End Main Content -->
+
+
+
+
+    </app-header-layout>
+  </app-drawer-layout>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</body>
+
+</html>

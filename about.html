@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>About | PRP High School</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F44336">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/png" href="images/index-images/PRPcrest.png" />
+  <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
+
+  <!--Polymer-->
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+  <link rel="import" href="elements/elements.html">
+
+  <!--Custom Styles-->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/about.css">
+
+  <!-- Themes -->
+  <link rel="stylesheet" type="text/css" href="css/light-theme.css">
+
+  <style is="custom-style" include="iron-flex iron-flex-alignment">
+    body {
+      margin: 0;
+      background-color: #eee;
+    }
+    
+    app-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      color: #fff;
+      background-color: #f44336;
+      --app-header-background-front-layer: {
+        background-image: url(images/history-images/prp-fine-arts-building.jpg);
+        background-position: center;
+      }
+      ;
+    }
+    
+    paper-icon-button {
+      --paper-icon-button-ink-color: white;
+    }
+    
+    app-toolbar.tall {
+      height: 500px;
+    }
+    
+    [main-title] {
+      font-weight: ;
+      margin-left: 140px;
+      text-shadow: 0.1em 0.1em 0.3em black;
+      margin-top: 1.33em;
+    }
+    
+    [main-title] span {
+      font-size: 0.7em;
+    }
+    
+    [condensed-title] {
+      font-weight: lighter;
+      margin-left: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 1.33em;
+    }
+    
+    [condensed-title] i {
+      font-weight: 200;
+      font-style: normal;
+    }
+    
+    @media (max-width: 639px) {
+      [main-title] {
+        margin-left: 50px;
+        font-size: 30px;
+      }
+      [condensed-title] {
+        font-size: 15px;
+      }
+      [main-title] span {
+        display: none;
+      }
+    }
+    
+    @media screen and (min-width:800px) {
+      .layout-horizontal {
+        @apply(--layout-horizontal);
+      }
+      .layout-flex-1 {
+        @apply(--layout-flex);
+      }
+      .layout-flex-2 {
+        @apply(--layout-flex-2);
+      }
+    }
+  </style>
+
+</head>
+
+<body class="fullbleed" unresolved>
+  <app-drawer-layout fullbleed force-narrow>
+    <app-drawer swipe-Open style="z-index:1;">
+      <div style="height: 100%; overflow: auto;">
+        <prp-nav></prp-nav>
+      </div>
+    </app-drawer>
+    <app-header-layout class="flex" mode="waterfall" main>
+      <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals>
+        <app-toolbar>
+          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <h4 condensed-title>About PRP</h4>
+          <nav-bar></nav-bar>
+          <span class="flex"></span>
+        </app-toolbar>
+        <app-toolbar class="tall">
+          <h1 main-title>About PRP</h1>
+        </app-toolbar>
+      </app-header>
+      <div class="site-content">
+        <br>
+        <br>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-2 sector-text">
+              <h1>PRP's Vision</h1>
+              <h3>PRP will be:</h3>
+              <ul>
+                <li>A place where family, community, and positive culture is stressed.</li>
+                <li>A place where ALL children feel a sense of belonging and diversity and individual differences have worh.</li>
+                <li>A place where young people grow to their potential and achieve at the highest levels.</li>
+              </ul>
+            </div>
+            <div class="layout-flex-1 fimg" style="background-image:url(images/about-images/mission.gif); background-size: contain;"></div>
+          </div>
+        </section>
+        <br>
+        <br>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-1 fimg" style="background-image:url(images/about-images/Pic-Me.JPG);"></div>
+            <div class="layout-flex-2 sector-text">
+              <h1>Note from our Principal</h1>
+              <p>As the Principal of PRP, I am looking forward to this school year more than any other in my career. I want to take this opportunity  to introduce myself to you. I am a life-long south end resident and I bring a passion for education and a vision for continued growth and success to Pleasure Ridge Park. The PRP community is a uniquely close-knit group that stays involved with their schools. I want to assure you all that I, too, am devoted to PRP's success.  Having worked at PRP as a teacher, a counselor, and an assistant principal, I have had the opportunity  to see this wonderful school from a number of perspectives. It has been my good fortune to be a member of many great teams; I anticipate the PRP team to be the best. PRP is one offew remaining community schools. Let's keep that going! Rest assured that I value the long-standing traditions of PRP and that I will work to protect them.</p>
+            </div>
+          </div>
+        </section>
+        <br>
+        <br>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-2 sector-text">
+              <h1>Our History</h1>
+              <p>The 2003-04 school year ushered in the future for PRP High School with a change in leadership. Principal David Johnson guided students and faculty toward success in academic and athletic pursuits. With 2 National Merit Semifinalists, 13 Governor’s Scholars, and more than 100 honor roll students, PRP students, faculty, and staff once again demonstrated their commitment to academic achievement.</p>
+                <p>This brief summary cannot begin to cover all the memories that students have taken with them from their time at PRP High School. Fortunately, it does not have to serve that purpose; these memories are carried in the hearts of all true Panthers forever.</p>
+                <a href="about/history.html">
+                <paper-button raised>
+                  Read more
+                </paper-button>
+              </a>
+            </div>
+            <div class="layout-flex-1 fimg" style="background-image:url(images/history-images/prp-in-1958.jpg);"></div>
+          </div>
+        </section>
+        <br><br>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-1 fimg" style="background-image:url(images/about-images/panthermascot.png); background-size:contain;"></div>
+            <div class="layout-flex-2 sector-text">
+              <h1>Advance Program</h1>
+              <h3>A program where challenges are met and leaders are made.</h3>
+              <p>In 1959, PRP High School was selected as one of the five original centers for the Advance Program, a complete program that focuses on critical thinking, abstract reasoning, and self-expression. Seasoned teachers encourage gifted and talented students to reach their potential. The Advance Program students are challenged in the classroom and are accustomed to a rigorous curriculum that allows them to be successful in college.</p>
+            </div>
+          </div>
+        </section>
+        <br>
+        <br>
+        <div id="theFightSong">
+          <section class="wrapper">
+          <h1>The Fight Song</h1>
+            <paper-material class="fightSongCard" elevation="1">
+              <p>We are the Panthers fierce and strong
+                <br>Of Pleasure Ridge High School
+                <br>Throughout the game we fight to win
+                <br>This is our Golden Rule!
+                <br>We're all behind you till the end—
+                <br>We'll cheer Red, Black, and White;
+                <br>Get in there now and WIN THIS GAME
+                <br>So come on, you Panthers, FIGHT!
+              </p>
+            </paper-material>
+          </section>
+        </div>
+        <br><br>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            
+            <div class="layout-flex-2 sector-text">
+              <h1>Our Mascot: Why Panthers?</h1>
+              <p>When PRP High School first opened in the fall of 1958, it was up to those first students, grades seven through nine, to vote on the school colors and mascot. In keeping with custom, the mascot had to begin with the same letter as the high school (for example, Butler Bears, Valley Vikings, Western Warriors, Doss Dragons). The choices that the student body came up with for the letter P were Pirates, Pythons, and Panthers.</p>
+              <p>The winner was the Panther, and the school colors were red and black. And the Panther makes for a great mascot costume. After all, could we really sing along with a straight face if Joy (Mitchiner) Leathers ('62) had been forced to pen the words: "We are the Pythons thick and long of Pleasure Ridge High School..."</p>
+            </div>
+            <div class="layout-flex-1 fimg" style="background-image:url(images/about-images/panthermascot.png); background-size:contain;"></div>
+          </div>
+        </section>
+        <br>
+        <br>
+          <div id="snowMan">
+          <section class="wrapper">
+            <h1>The Snow Man Game</h1>
+            <div class="layout-horizontal v-center">
+              
+                <div class="layout-flex-1">
+                  <img src="images/about-images/snowman2016.jpg"></img>
+                </div>
+              <div class="layout-flex-2">
+              <paper-material class="snowmanGameCard" elevation="1">
+
+              <p>On November 4, 1966, during the school day, we had a little unexpected snow. The snow started falling, falling, and falling. By the time it ended, we had more than 13 inches of snow in one school day. It was during the football season, and the boys, coaches, and some fans had already arrived for the game when it was canceled because the field was covered with snow. They decided that the game would be rescheduled after the snow was gone, but boys being boys, they decided to play in the snow. They made very large snowballs, had snowball fights, and built large snowmen all along the field. When the game was finally played the next week, PRP won 33 to 6. Someone from the Valley side had purchased a plastic snowman that they presented to PRP for their victory.</p>
+              <p>It did not stop there because some of the boys decided that they wanted to make a papier-mâché snowman to be given yearly to the winner of the PRP/Valley football game, putting the score on the snowman for each game played. Thus the snowman tradition was born. The last game was played in 1998, and now the snowman is resting comfortably at PRP with no plans of making a return trip down the highway anytime soon.</p>
+              
+            </paper-material>
+              </div>
+                
+            </div>
+          </section>
+        </div>
+        <br>
+      <br>
+      <section class="wrapper card">
+          <div class="layout-horizontal">
+            
+            <div class="layout-flex-2 sector-text">
+              <h1>Schools of Study</h1>
+                <p>Communication skills are in demand across occupations, according to a report on the fastest-growing careers by the U.S. Department of Labor. At PRP High School, courses are available in public speaking, radio and television production, stage and costume design, print media, graphic arts, and visual and performing arts. Students work in well-equipped, state-of-the-art studios. They get many chances to practice their craft and show off their skills. Whether they're painting, drawing, acting on stage, creating digital art, building a Website, writing a short story or novel, editing news articles, anchoring a broadcast, or directing a film, students receive both solid academic instruction and practical experience.</p>
+            </div>
+            <div class="layout-flex-1 fimg" style="background-image:url(http://3.bp.blogspot.com/-FRx8LT5fpu4/VLh6F59x-sI/AAAAAAAAAh0/cyrtbvpSOw0/s1600/Ridge%2BNews%2B%2BJanuary%2B16%2B%2B2015%2BS3%2B%2BEP12%2B%2B%2BYouTube.jpeg);"></div>
+          </div>
+        </section>
+      <br>
+        <br>
+        <div id="almaMater">
+          <section class="wrapper">
+          <h1>The Alma Mater</h1>
+            <paper-material class="almaMaterCard" elevation="1">
+
+              <p>Praise to thee, our Alma Mater,
+                <br>Ever loyal, brave and true;
+                <br>Lead us on in truth and honor
+                <br>In the paths that we pursue.
+                <br>Serving mankind under God,
+                <br>As we go our way;
+                <br>Righting wrongs where'er we trod,
+                <br>Striving day by day;
+                <br>Rising up to every challenge,
+                <br>May we keep our Golden Rule—
+                <br>As we proudly honor thee:
+                <br>Our Pleasure Ridge Park High School.</p>
+              
+            </paper-material>
+          </section>
+        </div>
+      <br><br>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-1 fimg" style="background-image:url(images/about-images/Pantehr-Media-2014.jpg);"></div>
+            <div class="layout-flex-2 sector-text">
+              <h1>A School With Heart</h1>
+                <p>Pleasure Ridge Park high School stands out from other high schools because of its big heart—one that beats incessantly for its nineteen hundred students. PRP’s heart beats when a student answers a tough question in a class discussion or when a player hits a home run in a big game. Its heart beats when the special needs kids play Christmas Carols in the bell choir. It beats when one of its own sings better than he ever has in the school musical or when the PRP cheerleaders lead the crowd in “Let’s go Panthers”.</p>
+                <p>This wonderful, strong heart beats when a Panther wins an art contest or when a teacher’s praise makes a student’s day. It beats when the principal tells every student, every day, to make good decisions or when PRP celebrates one of its tried and true traditions.</p>
+                <p>This PRP heart skips a beat when a group of freshmen opens its front door and walks down the halls for the very first time.</p>
+                <p>The heart of Pleasure Ridge Park High School—ah, a heart that keeps beating and beating and giving and giving.</p>
+            </div>
+          </div>
+        </section>
+      <br>
+      </div>
+
+      <prp-footer class="clear"></prp-footer>
+
+    </app-header-layout>
+  </app-drawer-layout>
+</body>
+
+</html>
