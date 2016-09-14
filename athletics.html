@@ -94,7 +94,6 @@
     @media screen and (min-width:800px) {
       .layout-horizontal {
         @apply(--layout-horizontal);
-        padding: 5px;
       }
       .layout-flex-1 {
         @apply(--layout-flex);
@@ -131,7 +130,7 @@
       </app-header>
 
 
-      <div class="menu clearRow">
+      <div class="menu ">
         <div>
           <a href="">
             <paper-button style="background-color:#F44336; color: white">
@@ -168,17 +167,17 @@
           </a>
         </div>
       </div>
-      
+      <br>
       <section class="wrapper">
-        <div class="layout-horizontal">
-          <div class="layout-flex-1">
-            <!-- Name of Sport with picture -->
+        <div class="layout-horizontal" style="background-color:red">
+          <div class="layout-flex-1 sport" style="background-image: url(images/athletics/archery.jpg);">
+            <h2>Archery</h2>
           </div>
           <div class="layout-flex-1">
-            <!-- Coach's -->
+            <h3>DOdodo</h3>
           </div>
           <div class="layout-flex-1">
-            <!-- Schedule -->
+            <h3>Schedule!</h3>
           </div>
         </div>
       </section>
