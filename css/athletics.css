@@ -1,6 +1,7 @@
 .sport {
+  min-height: 150px;
   position: relative;
-  background-position: 0% 25%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0px;
@@ -36,7 +37,7 @@
 }
 
 #pad {
-  padding: 10px;
+  padding: 20px;
 }
 
 .sport h2 {
