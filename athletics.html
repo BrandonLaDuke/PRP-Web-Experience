@@ -78,6 +78,10 @@
       font-style: normal;
     }
     
+    .layout-horizontal {
+      margin-top: 20px;
+    }
+    
     @media (max-width: 639px) {
       [main-title] {
         margin-left: 50px;
@@ -131,6 +135,7 @@
 
 
       <div class="menu ">
+        <br>
         <div>
           <a href="">
             <paper-button style="background-color:#F44336; color: white">
@@ -169,15 +174,30 @@
       </div>
       <br>
       <section class="wrapper">
-        <div class="layout-horizontal" style="background-color:red">
-          <div class="layout-flex-1 sport" style="background-image: url(images/athletics/archery.jpg);">
+        <div class="layout-horizontal" style="background-color:#fafafa">
+          <div class="layout-flex-2 sport" style="background-image: url(images/athletics/archery.jpg);">
             <h2>Archery</h2>
           </div>
-          <div class="layout-flex-1">
-            <h3>DOdodo</h3>
+          <div class="layout-flex-1" id="pad">
+            <h2>Coach</h2>
+            <h3>Melinda Baum</h3>
           </div>
-          <div class="layout-flex-1">
-            <h3>Schedule!</h3>
+          <div class="layout-flex-1" id="pad">
+            <h2>Coach</h2>
+            <h3>Melinda Baum</h3>
+            <h3>View Schedule</h3>
+          </div>
+        </div>
+        <div class="layout-horizontal" style="background-color:#fafafa">
+          <div class="layout-flex-2 sport" style="background-image: url(images/athletics/baseball.jpg);">
+            <h2>Baseball</h2>
+          </div>
+          <div class="layout-flex-1" id="pad">
+            <h2>Coach</h2>
+            <h3>Bill Miller</h3>
+          </div>
+          <div class="layout-flex-1" id="pad">
+            <a href="http://prpbaseball.org/"><h3>Visit Website</h3></a>
           </div>
         </div>
       </section>
