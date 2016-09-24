@@ -6,13 +6,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content=" #F44336">
-  <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
+  <meta name="theme-color" content="#F44336">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/png" href="images/index-images/PRPcrest.png" />
+  <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
 
-  <!--Polymer-->
-
+  <!-- Polymer Custom Elements -->
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
   <link rel="import" href="bower_components/polymer/polymer.html">
-  <link rel="import" href="bower_components/webcomponentsjs/webcomponents.js">
   <link rel="import" href="elements/elements.html">
 
   <!--Custom Styles-->
@@ -20,467 +22,294 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/students.css">
 
-  <!-- Jumbotron Background -->
-  <style>
-    .jumbotron {
-      background-image: url(images/athletics/Athletics.jpg);
-      background-position: top;
+  <!-- Themes -->
+  <link rel="stylesheet" type="text/css" href="css/light-theme.css">
+
+  <style is="custom-style" include="iron-flex iron-flex-alignment">
+    body {
+      margin: 0;
+      background-color: #eee;
+    }
+    
+    app-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      color: #fff;
+      background-color: #f44336;
+      --app-header-background-front-layer: {
+        background-image: url(images/academics/Academics.jpg);
+        background-position: center;
+      }
+      ;
+    }
+    
+    paper-icon-button {
+      --paper-icon-button-ink-color: white;
+    }
+    
+    app-toolbar.tall {
+      height: 500px;
+    }
+    
+    [main-title] {
+      font-weight: ;
+      margin-left: 140px;
+      text-shadow: 0.1em 0.1em 0.3em black;
+      margin-top: 1.33em;
+    }
+    
+    [main-title] span {
+      font-size: 0.7em;
+    }
+    
+    [condensed-title] {
+      font-weight: lighter;
+      margin-left: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 1.33em;
+    }
+    
+    [condensed-title] i {
+      font-weight: 200;
+      font-style: normal;
+    }
+    
+    .layout-horizontal {
+      margin-top: 20px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+    }
+    
+    @media (max-width: 639px) {
+      [main-title] {
+        margin-left: 50px;
+        font-size: 30px;
+      }
+      [condensed-title] {
+        font-size: 15px;
+      }
+      [main-title] span {
+        display: none;
+      }
+    }
+    
+    @media screen and (min-width:800px) {
+      .layout-horizontal {
+        @apply(--layout-horizontal);
+      }
+      .layout-vertical {
+        @apply(--layout-vertical);
+      }
+      .layout-flex-1 {
+        @apply(--layout-flex);
+      }
+      .layout-flex-2 {
+        @apply(--layout-flex-2);
+      }
     }
   </style>
 
 </head>
 
 <body>
-  <paper-drawer-panel force-narrow>
-    <paper-header-panel id="drawer" drawer>
-      <paper-toolbar></paper-toolbar>
-      <prp-nav></prp-nav>
-    </paper-header-panel>
-    <paper-header-panel class="flex" mode="waterfall" main>
-      <paper-toolbar>
-        <paper-icon-button icon="menu" on-tap="menuAction" paper-drawer-toggle></paper-icon-button>
-        <div class="title">Students</div>
-        <nav-bar></nav-bar>
-        <span class="flex"></span>
-        <search-bar></search-bar>
-      </paper-toolbar>
-
-      <header>
-        <div class="jumbotron">
-          <div class="container gradients paddingSide">
-            <h1>Students</h1>
-            <h2>PRP's Students</h2>
-          </div>
-        </div>
-      </header>
-
-      <section class="paddingSide clearRow">
-
-        <div class="sub">
-
-        </div>
-
-        <div class="clearRow main">
-
-          <div class="item" style="background-image:url(images/athletics/archery.jpg);">
-            <div class="overlay">
-              <h2>Study Skills</h2>
-            </div>
-          </div>
-
-          <div class="item" style="background-image:url(images/athletics/baseball.jpg);">
-            <div class="overlay">
-              <h2>Library</h2>
-            </div>
-          </div>
-
-          <div class="item" style="background-image:url(images/athletics/basketball.jpg);">
-            <div class="overlay">
-              <h2>Organizations and Clubs</h2>
-            </div>
-          </div>
-
-          <div class="item" style="background-image:url(images/athletics/bowling.jpeg);">
-            <div class="overlay">
-              <h2>PTSA</h2>
-            </div>
-          </div>
-
-          <div class="item" style="background-image:url(images/athletics/cheer.JPG);">
-            <div class="overlay">
-              <h2>Youth Services Center</h2>
-            </div>
-          </div>
-
-          <div class="item" style="background-image:url(images/athletics/);">
-            <div class="overlay">
-              <h2>Newsletters</h2>
-            </div>
-          </div>
-
-          <div class="clearRow"></div>
-
-        </div>
-      </section>
-
-      <div class="red">
-        <section class="paddingSide clearRow">
-
-          <div class="imageLeft">
-            <img src="images/history-images/prp-in-1958.png" />
-          </div>
-
-          <div class="textRight ilp">
-            <br>
-            <h1>Individual Learning Plan</h1>
-            <h2>What is the Individual Learning Plan (ILP)?</h2>
-            <p>Students across Kentucky are required to complete or revise their ILP each year of high school. Seneca has adopted a School-Based Decision Making (SBDM) policy stating that ILP completion is a requirement of promotion to the next grade as well as graduation.</p>
-            <a href="">
-              <paper-button raised>
-                ILP
-              </paper-button>
-            </a>
-          </div>
-          <div class="clearRow"></div>
-
-        </section>
+  <app-drawer-layout force-narrow>
+    <app-drawer swipe-Open style="z-index:1;">
+      <div style="height: 100%; overflow: auto;">
+        <prp-nav></prp-nav>
       </div>
-
-      <div class="black">
-        <section class="paddingSide clearRow">
-
-          <div class="imageRight">
-            <img src="images/history-images/prp-in-1958.png" />
-          </div>
-
-          <div class="textLeft prograd">
-            <h1>Promotion and Graduation Requirements</h1>
-            <p>Click the button to view the requirements.</p>
-            <a href="">
-              <paper-button raised>
-                Student Progression, Promotion, and Grading
-              </paper-button>
-            </a>
-          </div>
-
-        </section>
-        <div class="clearRow"></div>
-      </div>
-
-      <section class="paddingSide clearRow">
-        <div class="heading">
-          <br>
-          <h1>Preparing for Your Future</h1>
-        </div>
-
-        <div class="">
-          <h2>Life After High School</h2>
-          <p>Life After High School is produced by JCPS counselors to help juniors plan for their lives after high school graduation. It's a great tool not only for juniors but for seniors as they begin the process of applying for college.</p>
-        </div>
-
-        <div class="item" style="background-image:url(images/athletics/archery.jpg);">
-          <div class="overlay">
-            <h4>Ten Things You Should Consider When Choosing a College</h4>
-          </div>
-        </div>
-        <div class="item" style="background-image:url(images/athletics/archery.jpg);">
-          <div class="overlay">
-            <h4>Guide to Choosing a College or University, Choosing a Major or Career, and Finding Scholarships</h4>
-          </div>
-        </div>
-        <div class="item" style="background-image:url(images/athletics/archery.jpg);">
-          <div class="overlay">
-            <h4>Kentucky Educational Excellence Scholarship (KEES)</h4>
-          </div>
-        </div>
-
-        <paper-material id="datesAndLinks">
-          <div style="background-color:#F44336">
-            <center>
-              <h3>Intercollegiate Athletics</h3>
-            </center>
-          </div>
-          <div>
-            <a href="">
-              <paper-item>
-                National Association of Intercollegiate Athletics (NAIA)
-              </paper-item>
-            </a>
-            <a href="">
-              <paper-item>
-                National Collegiate Athletic Association (NCAA)
-              </paper-item>
-            </a>
-          </div>
-        </paper-material>
-        <div class="clearRow"></div>
-
-      </section>
-
-      <div class="college_planning clearRow">
-        <section class="paddingSide clearRow">
-          <div class="">
-
-            <h1>Helpful Web Sites and Phone Numbers</h1>
-
-            <paper-material class="helpful">
-              <div style="background-color:#F44336">
-                <center>
-                  <h3 style="padding:15px; margin-bottom:0">College Planning</h3>
-                </center>
-              </div>
-              <div>
-
-                <a href="">
-                  <paper-item>
-                    College Answer
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    The College Board
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    EducationPlanner.org
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Mapping Your Future
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    My College Guide
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Princeton Review
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    OffToCollege.com
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Peterson's
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Scholarship Experts
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    U.S. Department of Education
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Upromise
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Xap
-                  </paper-item>
-                </a>
-
-              </div>
-
-            </paper-material>
+    </app-drawer>
+    <app-header-layout class="flex" mode="waterfall" main>
+      <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals>
+        <app-toolbar>
+          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <h4 condensed-title>Parents</h4>
+          <nav-bar></nav-bar>
+          <span class="flex"></span>
+        </app-toolbar>
+        <app-toolbar class="tall">
+          <h1 main-title>Parents</h1>
+        </app-toolbar>
+      </app-header>
+      <br>
+      <br>
+      <div class="site-content">
+        <section class="wrapper card">
+          <div class="menu-layout">
             
-            <paper-material class="helpful">
-              <div style="background-color:#F44336">
-                <center>
-                  <h3 style="padding:15px; margin-bottom:0">Student Loans</h3>
-                </center>
-              </div>
-              <div>
-
-                <a href="">
-                  <paper-item>
-                    CHASE
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Sallie Mae
-                  </paper-item>
-                </a>
-              </div>
-              <div>
-                <div style="background-color:#F44336">
-                  <center>
-                    <h3 style="padding:15px; margin-bottom:0">U.S. Department of Education</h3>
-                  </center>
+            <!-- Schedule book link -->
+            <a class="menu-item" href="#">
+              <div class="item" style="background-image:url(images/athletics/archery.jpg);">
+                <div class="overlay">
+                  <h2>Schedule Book</h2>
+                  <paper-ripple></paper-ripple>
                 </div>
-
-                <a href="">
-                  <paper-item>
-                    FAFSA on the Web
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    FAFSA PIN Registration
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Students 
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Parents 
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Teachers 
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Peterson's
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Scholarship Experts
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    U.S. Department of Education
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Upromise
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Xap
-                  </paper-item>
-                </a>
-
               </div>
-
-            </paper-material>
+            </a>
             
-            <paper-material class="helpful">
-              <div style="background-color:#F44336">
-                <center>
-                  <h3 style="padding:15px; margin-bottom:0">Student Loans</h3>
-                  <p>Citizenship and Immigration Service</p>
-                </center>
-              </div>
-              <div>
-
-                <a href="https://www.irs.gov/">
-                  <paper-item>
-                    IRS
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Sallie Mae
-                  </paper-item>
-                </a>
-              </div>
-              <div>
-                <div style="background-color:#F44336">
-                  <center>
-                    <h3 style="padding:15px; margin-bottom:0">U.S. Department of Education</h3>
-                  </center>
+            <!-- Schedule book link -->
+            <a class="menu-item" href="#">
+              <div class="item" style="background-image:url(images/athletics/archery.jpg);">
+                <div class="overlay">
+                  <h2>Application Process</h2>
+                  <paper-ripple></paper-ripple>
                 </div>
-
-                <a href="">
-                  <paper-item>
-                    FAFSA on the Web
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    FAFSA PIN Registration
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Students 
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Parents 
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Teachers 
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Peterson's
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Scholarship Experts
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    U.S. Department of Education
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Upromise
-                  </paper-item>
-                </a>
-
-                <a href="">
-                  <paper-item>
-                    Xap
-                  </paper-item>
-                </a>
-
               </div>
-
-            </paper-material>
-
+            </a>
+            
+            <!-- Schedule book link -->
+            <a class="menu-item" href="#">
+              <div class="item" style="background-image:url(images/athletics/archery.jpg);">
+                <div class="overlay">
+                  <h2>Parent Portal</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Schedule book link -->
+            <a class="menu-item" href="#">
+              <div class="item" style="background-image:url(images/athletics/archery.jpg);">
+                <div class="overlay">
+                  <h2>Operation Parent</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Schedule book link -->
+            <a class="menu-item" href="#">
+              <div class="item" style="background-image:url(images/athletics/archery.jpg);">
+                <div class="overlay">
+                  <h2>Paw Print</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Schedule book link -->
+            <a class="menu-item" href="#">
+              <div class="item" style="background-image:url(images/athletics/archery.jpg);">
+                <div class="overlay">
+                  <h2>Youth Services Center</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Schedule book link -->
+            <a class="menu-item" href="#">
+              <div class="item" style="background-image:url(images/athletics/archery.jpg);">
+                <div class="overlay">
+                  <h2>Counselor's Corner</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Schedule book link -->
+            <a class="menu-item" href="#">
+              <div class="item" style="background-image:url(images/athletics/archery.jpg);">
+                <div class="overlay">
+                  <h2>Clubs and Organizations</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            
+            <!-- Schedule book link -->
+            <a class="menu-item" href="#">
+              <div class="item" style="background-image:url(images/athletics/archery.jpg);">
+                <div class="overlay">
+                  <h2>PTSA</h2>
+                  <paper-ripple></paper-ripple>
+                </div>
+              </div>
+            </a>
+            
           </div>
-          <div class="clearRow"></div>
+        </section>
+        
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-1 text">
+              <h1>JCPS Information</h1>
+            </div>
+            <div class="DocLink layout-flex-2">
+              <div class="layout-vertical">
+                <a href="#">
+                  <paper-item>
+                    Parent Assistance Center
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    Health Requirements
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    Exceptional Child Education (ECE)
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    Activities and Athletics Department
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    Safe and Drug-Free Schools (information about drugs, alcohol, violence, and bullying)
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    Money Management for Students
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    Internet Safety
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    Homework Help
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    News About JCPS
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+                <a href="#">
+                  <paper-item>
+                    JCPS Online
+                    <paper-ripple></paper-ripple>
+                  </paper-item>
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
-
-
-
+      
+      
       <prp-footer></prp-footer>
 
-    </paper-header-panel>
-  </paper-drawer-panel>
+    </app-header-layout>
+  </app-drawer-layout>
 
 </body>
 

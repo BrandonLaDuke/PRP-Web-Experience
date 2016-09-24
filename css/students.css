@@ -63,6 +63,12 @@
   padding: 20px;
 }
 
+@media screen and (max-width: 500px) {
+  .item .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
 @media screen and (min-width: 800px) {
   .item {
     height: 150px

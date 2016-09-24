@@ -398,3 +398,25 @@ Mobile
     padding: 0px 10%;
   }
 }
+
+/* Set Two Column Layout for Photo Menus */
+@media screen and (min-width:600px) {
+  .menu-layout {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .menu-item {
+    flex: 1 0 50%;
+  }
+}
+
+/* Set Three Column Layout for Photo Menus */
+@media screen and (min-width:900px) {
+  .menu-layout {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .menu-item {
+    flex: 1 0 33%;
+  }
+}
