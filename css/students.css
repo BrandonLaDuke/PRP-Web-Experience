@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 500px) {
   .item .overlay {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 }
 

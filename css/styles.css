@@ -246,6 +246,9 @@ Mobile
 
 /* Sections */
 
+.sector-text {
+  padding: 1em;
+}
 
 /* About */
 
@@ -381,6 +384,11 @@ Mobile
     width: 96%;
     padding: 0px 2%;
   }
+  
+  .site-content {
+    margin-top: 20px;
+  }
+  
 }
 
 @media screen and (min-width: 1400px) {
