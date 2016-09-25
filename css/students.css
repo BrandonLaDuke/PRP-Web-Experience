@@ -14,16 +14,7 @@
   padding: 20px;
 }
 
-.fimg {
-  position: relative;
-  background-position: 0% 25%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 0px;
-  text-shadow: black 0.2em 0.2em 0.2em;
-  color: white;
-  opacity: 1;
-}
+
 
 .item .overlay {
   background-color: rgba(0, 0, 0, 0.2);

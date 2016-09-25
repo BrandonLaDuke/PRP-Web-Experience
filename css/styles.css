@@ -9,6 +9,7 @@ h4,
 h5,
 h6,
 p,
+li,
 a {
   font-family: 'Roboto', sans-serif;
   margin-top: 0;
@@ -285,6 +286,18 @@ Mobile
   line-height: 25px;
 }
 
+.fimg {
+  position: relative;
+  background-position: 0% 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0px;
+  text-shadow: black 0.2em 0.2em 0.2em;
+  color: white;
+  opacity: 1;
+  min-height: 200px;
+}
+
 @media screen and (max-width: 500px) {
   .jumbotron .container {
     padding: 10px;
@@ -426,5 +439,16 @@ Mobile
   }
   .menu-item {
     flex: 1 0 33%;
+  }
+}
+
+/* Set Three Column Layout for Photo Menus */
+@media screen and (min-width:600px) {
+  .menu-layout {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .menu-item-2 {
+    flex: 1 0 50%;
   }
 }
