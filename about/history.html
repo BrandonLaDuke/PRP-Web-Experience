@@ -1,161 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>History | PRP High School</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#F44336">
-    <link rel="stylesheet" type="text/css" href="../bower_components/normalize.css/normalize.css">
+
+<head>
+  <title>About | PRP High School</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F44336">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/png" href="../images/home/PRPcrest.png" />
+  <link rel="stylesheet" type="text/css" href="../bower_components/normalize.css/normalize.css">
+
+  <!--Polymer-->
+  <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <link rel="import" href="../bower_components/polymer/polymer.html">
+  <link rel="import" href="../elements/elements.html">
+
+  <!--Custom Styles-->
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <link rel="stylesheet" type="text/css" href="../css/about.css">
+
+  <!-- Themes -->
+  <link rel="stylesheet" type="text/css" href="../css/light-theme.css">
+
+  <style is="custom-style" include="iron-flex iron-flex-alignment">
+    body {
+      margin: 0;
+      background-color: #eee;
+    }
     
-    <!--Framework-->
+    app-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      color: #fff;
+      background-color: #f44336;
+      --app-header-background-front-layer: {
+        background-image: url(../images/about/history/prp-fine-arts-building.jpg);
+        background-position: center;
+      }
+      ;
+    }
     
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    paper-icon-button {
+      --paper-icon-button-ink-color: white;
+    }
     
-    <!--Polymer-->
+    app-toolbar.tall {
+      height: 500px;
+    }
     
-    <link rel="import" href="../bower_components/polymer/polymer.html">
-    <link rel="import" href="../bower_components/webcomponentsjs/webcomponents.js">
-    <link rel="import" href="../elements/elements.html">
+    [main-title] {
+      font-weight: ;
+      margin-left: 140px;
+      text-shadow: 0.1em 0.1em 0.3em black;
+      margin-top: 1.33em;
+    }
     
-    <!--Custom Styles-->
+    [main-title] span {
+      font-size: 0.7em;
+    }
     
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    [condensed-title] {
+      font-weight: lighter;
+      margin-left: 30px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 1.33em;
+    }
     
-  </head>
-  <body>
-    <paper-drawer-panel>
-      <paper-header-panel id="drawer" drawer>
-        <paper-toolbar><div class="title">Pleasure Ridge Park</div></paper-toolbar>
-        <a href="../index.html"><paper-item>Home</paper-item></a>
-        <a href="../about.html"><paper-item>About Us</paper-item></a>
-        <a href="../academics.html"><paper-item>Academics</paper-item></a>
-        <a href=""><paper-item>Athletics</paper-item></a>
-        <a href=""><paper-item>Students</paper-item></a>
-        <a href=""><paper-item>Staff</paper-item></a>
-        <a href=""><paper-item>Parents</paper-item></a>
-        <a href=""><paper-item>Counselors</paper-item></a>
-        <a href="http://prpfinearts.weebly.com/"><paper-item>Theatre</paper-item></a>
-        <a href=""><paper-item>Art</paper-item></a>
-        <a href=""><paper-item>Paw Print</paper-item></a>
-        <a href=""><paper-item>Panther Media</paper-item></a>
-      </paper-header-panel>
-      <paper-header-panel class="flex" mode="waterfall" main>
-        <paper-toolbar>
-          <paper-icon-button icon="menu" on-tap="menuAction" paper-drawer-toggle></paper-icon-button>
-          <div class="title">History</div>
-        </paper-toolbar>
-        
-        <header>
-          <div class="jumbotron">
-            <div class="container">
-              <h1>History</h1>
+    [condensed-title] i {
+      font-weight: 200;
+      font-style: normal;
+    }
+    
+    @media (max-width: 639px) {
+      [main-title] {
+        margin-left: 50px;
+        font-size: 30px;
+      }
+      [condensed-title] {
+        font-size: 15px;
+      }
+      [main-title] span {
+        display: none;
+      }
+    }
+    
+    @media screen and (min-width:800px) {
+      .layout-horizontal {
+        @apply(--layout-horizontal);
+      }
+      .layout-flex-1 {
+        @apply(--layout-flex);
+      }
+      .layout-flex-2 {
+        @apply(--layout-flex-2);
+      }
+    }
+  </style>
+
+</head>
+
+<body class="fullbleed" unresolved>
+  <app-drawer-layout fullbleed force-narrow>
+    <app-drawer swipe-Open style="z-index:1;">
+      <div style="height: 100%; overflow: auto;">
+        <prp-nav></prp-nav>
+      </div>
+    </app-drawer>
+    <app-header-layout class="flex" mode="waterfall" main>
+      <app-header effects="waterfall resize-title blend-background parallax-background" condenses reveals>
+        <app-toolbar>
+          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <h4 condensed-title>The History of PRP - Since 1958</h4>
+          <nav-bar></nav-bar>
+          <span class="flex"></span>
+        </app-toolbar>
+        <app-toolbar class="tall">
+          <h1 main-title>The History of PRP</h1>
+        </app-toolbar>
+      </app-header>
+      <div class="site-content">
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-2 sector-text">
+              <h1>1952 – 1966</h1>
+              <p>PRP High School began as one of 28 new Jefferson County Schools built between 1952 and 1958. The three-story building was first opened for classes on September 3, 1958. During the school's early years, students in the seventh, eighth, and ninth grades attended PRP, with a grade added each year until 1962, the year of the first graduating class. The Advance Program curriculum for academically eligible students made its debut during this time, with the first Advance Program classes appearing on schedules in 1959.</p>
+              <p>In 1964, the student body was so large that double sessions were required for three years. The year 1966 marked the addition of four portables, which spelled the end of double sessions.</p>
             </div>
-          </div>
-        </header>
-        
-        <section>
-          <div class="row red">
-            <div id="2014-present">
-              <div class="historyImageLeft">
-                <img src="../images/placeholders/500-500%20placeholder.svg" alt="" />
-              </div>
-              <div class="historyTextRight">
-                <h1>2014 - Present</h1>
-                <p>Coming Soon...</p>
-              </div>
-            </div>
+            <div class="layout-flex-1 fimg" style="background-image:url(../images/about/history/prp-in-1958.jpg);"></div>
           </div>
         </section>
-        
-        <section>
-          <div class="row black">
-            <div id="2003-present">
-              <div class="historyImageRight">
-                <img src="../images/placeholders/500-500%20placeholder.svg" alt="" />
-              </div>
-              <div class="historyTextLeft">
-                <h1>2003 - Present</h1>
-                <p>The 2003-04 school year ushered in the future for PRP High School with a change in leadership. Principal David Johnson guided students and faculty toward success in academic and athletic pursuits. With 2 National Merit Semifinalists, 13 Governor’s Scholars, and more than 100 honor roll students, PRP students, faculty, and staff once again demonstrated their commitment to academic achievement.</p>
-                <p>This brief summary cannot begin to cover all the memories that students have taken with them from their time at PRP High School. Fortunately, it does not have to serve that purpose; these memories are carried in the hearts of all true Panthers forever.</p>
-              </div>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-2 sector-text">
+              <h1>1973 – 1978</h1>
+              <p>In 1973, JCPS experienced a landmark change, desegregation. A new multimedia annex was built on the site of the common area, known as the Courtyard.</p>
+              <p>At this time, the newly formed soccer team was setting its roots, and the football team won its first district title in 12 years. PRP's academic teams also excelled; 1977–78 marked the first in a series of State Championships for the High-Q Team.</p>
             </div>
+            <div class="layout-flex-1 fimg" style="background-image:url(../images/about/history/prp-in-1958.jpg);"></div>
           </div>
         </section>
-        
-        <section>
-          <div class="row white">
-            <div id="1981-1992">
-              <div class="historyImageLeft">
-                <img src="../images/placeholders/500-500%20placeholder.svg" alt="" />
-              </div>
-              <div class="historyTextRight">
-                <h1>1981 - 1992</h1>
-                <p>During 1981-82, the seventh and eighth grades were separated from PRP High School and moved into middle schools. A high point in Panther history came with the crowning of the PRP basketball team as State Champions in 1989. The Panthers defeated Wayne County High School, 75 to 73, in the final game. This achievement was remarkable not only because it was PRP's first state title but also because it was the first one won by a Louisville team in Rupp Arena.</p>
-                <p>With the onset of the 1990s, many new and innovative programs were born at PRP. Norton’s Health Care Program is designed to educate students for careers in the medical fields. For those interested in a teaching career, the Future Educators Program provides internships at neighboring elementary and middle schools. Along with these programs, PRP teams up with various colleges, including the University of Louisville (UofL), Jefferson Community and Technical College (JCTC), and Bellarmine University, to offer college credit in subjects ranging from humanities to English to calculus to computer science.</p>
-                <p>In the fall of 1992, the PRP Vocational School merged with PRP High School to become PRP High School Magnet Career Academy (MCA) with more classroom space and a wider variety of class options: Horticulture, Information Technology, Industrial Chemical Technology, and Machine Tool Technology. All of these programs add a new dimension to PRP, making the school’s technology programs the best in the state.</p>
-              </div>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-2 sector-text">
+              <h1>1978 – 1979</h1>
+              <p>In 1978-79, Charles W. Miller was appointed principal. During his first year, Mr. Miller proved himself a devoted Panther as he waged a successful and spirited campaign to keep the school open when the Board of Education threatened it with closure. He also proposed new landscaping and a brick facade for the building to replace the aging concrete.</p>
+              <p>Providing unparalleled leadership throughout his tenure, Mr. Miller, the only three-time State Principal of the Year in Kentucky, grew PRP High School into an educational magnet, attracting hundreds of applicants every year.</p>
             </div>
+            <div class="layout-flex-1 fimg" style="background-image:url(../images/about/history/prp-in-1958.jpg);"></div>
           </div>
         </section>
-        
-        <section>
-          <div class="row red">
-            <div id="1978-1979">
-              <div class="historyImageRight">
-                <img src="../images/placeholders/500-500%20placeholder.svg" alt="" />
-              </div>
-              <div class="historyTextLeft red">
-                <h1>1978 - 1979</h1>
-                <p>In 1978-79, Charles W. Miller was appointed principal. During his first year, Mr. Miller proved himself a devoted Panther as he waged a successful and spirited campaign to keep the school open when the Board of Education threatened it with closure. He also proposed new landscaping and a brick facade for the building to replace the aging concrete.</p>
-                <p>Providing unparalleled leadership throughout his tenure, Mr. Miller, the only three-time State Principal of the Year in Kentucky, grew PRP High School into an educational magnet, attracting hundreds of applicants every year.</p>
-              </div>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-2 sector-text">
+              <h1>1981 – 1992</h1>
+              <p>During 1981-82, the seventh and eighth grades were separated from PRP High School and moved into middle schools. A high point in Panther history came with the crowning of the PRP basketball team as State Champions in 1989. The Panthers defeated Wayne County High School, 75 to 73, in the final game. This achievement was remarkable not only because it was PRP's first state title but also because it was the first one won by a Louisville team in Rupp Arena.</p>
+              <p>With the onset of the 1990s, many new and innovative programs were born at PRP. Norton’s Health Care Program is designed to educate students for careers in the medical fields. For those interested in a teaching career, the Future Educators Program provides internships at neighboring elementary and middle schools. Along with these programs, PRP teams up with various colleges, including the University of Louisville (UofL), Jefferson Community and Technical College (JCTC), and Bellarmine University, to offer college credit in subjects ranging from humanities to English to calculus to computer science.</p>
+              <p>In the fall of 1992, the PRP Vocational School merged with PRP High School to become PRP High School Magnet Career Academy (MCA) with more classroom space and a wider variety of class options: Horticulture, Information Technology, Industrial Chemical Technology, and Machine Tool Technology. All of these programs add a new dimension to PRP, making the school’s technology programs the best in the state.</p>
             </div>
+            <div class="layout-flex-1 fimg" style="background-image:url(../images/about/history/prp-in-1958.jpg);"></div>
           </div>
         </section>
-        
-        <section>
-          <div class="row black">
-            <div id="1973-1978">
-              <div class="historyImageLeft">
-                <img src="../images/placeholders/500-500%20placeholder.svg" alt="" />
-              </div>
-              <div class="historyTextRight black">
-                <h1>1973 - 1978</h1>
-                <p>In 1973, JCPS experienced a landmark change, desegregation. A new multimedia annex was built on the site of the common area, known as the Courtyard.</p>
-                <p>At this time, the newly formed soccer team was setting its roots, and the football team won its first district title in 12 years. PRP's academic teams also excelled; 1977–78 marked the first in a series of State Championships for the High-Q Team.</p>
-              </div>
+        <section class="wrapper card">
+          <div class="layout-horizontal">
+            <div class="layout-flex-2 sector-text">
+              <h1>2003 – Present</h1>
+              <p>The 2003-04 school year ushered in the future for PRP High School with a change in leadership. Principal David Johnson guided students and faculty toward success in academic and athletic pursuits. With 2 National Merit Semifinalists, 13 Governor’s Scholars, and more than 100 honor roll students, PRP students, faculty, and staff once again demonstrated their commitment to academic achievement.</p>
+              <p>This brief summary cannot begin to cover all the memories that students have taken with them from their time at PRP High School. Fortunately, it does not have to serve that purpose; these memories are carried in the hearts of all true Panthers forever.</p>
             </div>
+            <div class="layout-flex-1 fimg" style="background-image:url(../images/about/history/prp-fine-arts-building.jpg);"></div>
           </div>
         </section>
-        
-        <section>
-          <div class="row white">
-            <div id="1952-1966">
-              <div class="historyImageRight">
-                <img src="../images/history-images/prp-in-1958.png" alt="" />
-              </div>
-              <div class="historyTextLeft white">
-                <h1>1952-1966</h1>
-                <p>PRP High School began as one of 28 new Jefferson County Schools built between 1952 and 1958. The three-story building was first opened for classes on September 3, 1958. During the school's early years, students in the seventh, eighth, and ninth grades attended PRP, with a grade added each year until 1962, the year of the first graduating class. The Advance Program curriculum for academically eligible students made its debut during this time, with the first Advance Program classes appearing on schedules in 1959.</p>
-                <p>In 1964, the student body was so large that double sessions were required for three years. The year 1966 marked the addition of four portables, which spelled the end of double sessions.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <footer>
-          <div id="redLine">
-            <br>
-          </div>
-          <div>
-             <p>Pleasure Ridge Park High School | 5901 Greenwood Road, Louisville, Kentucky 40258 | <a href="tel:+15024858311">1 (502) 485-8311</a></p>
-          </div>
-        </footer>
-        
-      </paper-header-panel>
-    </paper-drawer-panel>
-  </body>
+      </div>
+
+      <prp-footer class="clear"></prp-footer>
+
+    </app-header-layout>
+  </app-drawer-layout>
+</body>
+
 </html>

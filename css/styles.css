@@ -344,6 +344,7 @@ Mobile
   
   .card {
     box-shadow: 0em 0.1em 0.2em rgba(0,0,0,0.6);
+    margin-top: 1em;
   }
   
   .jumbotron {
