@@ -77,6 +77,10 @@
     font-style: normal;
   }
   
+  ol li {
+    margin-bottom: 10px;
+  }
+  
   @media (max-width: 639px) {
     [main-title] {
       margin-left: 50px;
@@ -89,6 +93,17 @@
       display: none;
     }
   }
+  
+  .layout-horizontal-a {
+      @apply(--layout-horizontal);
+      padding: 5px;
+    }
+    .layout-flex-1-a {
+      @apply(--layout-flex);
+    }
+  .layout-flex-2-a {
+      @apply(--layout-flex-2);
+    }
   
   @media screen and (min-width:800px) {
     .layout-horizontal {
@@ -129,33 +144,109 @@
         </app-toolbar>
       </app-header>
       <div class="site-content">
-        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">English</h1>
+        <div class="wrapper card layout-horizontal">
+          <div class="sector-text layout-flex-1">
+            <h2>Graduation Requirements</h2>
+            <h4>Students must earn 22 credits to graduate</h4>
+            <img src="images/academics/graduation.jpg" alt="PRP Graduation" />
+          </div>
+          <div class="sector-text layout-flex-1">
+            <h2>Academic Grades</h2>
+            <p>The assignment of letter grades for regular education classes will be based on the following numerical averages:</p>
+            <div class="layout-horizontal-a">
+              <div class="layout-flex-1-a">
+                <h1>A</h1>
+              </div>
+              <div class="layout-flex-2-a">
+                <h2>90% - 100%</h2>
+              </div>
+              </div>
+            <div class="layout-horizontal-a">
+              <div class="layout-flex-1-a">
+                <h1>B</h1>
+              </div>
+              <div class="layout-flex-2-a">
+                <h2>80% - 89%</h2>
+              </div>
+            </div>
+            <div class="layout-horizontal-a">
+              <div class="layout-flex-1-a">
+                <h1>C</h1>
+              </div>
+              <div class="layout-flex-2-a">
+                <h2>70% - 79%</h2>
+              </div>
+            </div>
+            <div class="layout-horizontal-a">
+              <div class="layout-flex-1-a">
+                <h1>D</h1>
+              </div>
+              <div class="layout-flex-2-a">
+                <h2>60% - 69%</h2>
+              </div>
+            </div>
+            <div class="layout-horizontal-a">
+              <div class="layout-flex-1-a">
+                <h1>U</h1>
+              </div>
+              <div class="layout-flex-2-a">
+                <h2>Below 60%</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">English <span>(4 Credits)</span></h1>
         <english-courses></english-courses>
         <br>
         <div class="parallax1"></div>
-        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Math</h1>
+        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Health / PE <span>(1 Credits)</span></h1>
         <math-courses></math-courses>
         <br>
         <div class="parallax2"></div>
-        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Science</h1>
+        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Math <span>(3 Credits)</span></h1>
         <science-courses></science-courses>
         <br>
         <div class="parallax3"></div>
-        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Social Studies</h1>
+        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Humanities <span>(1 Credit)</span></h1>
         <social-studies-courses></social-studies-courses>
         <br>
         <div class="parallax4"></div>
-        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Visual Art</h1>
+        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Science <span>(3 Credits)</span></h1>
         <visual-art-courses></visual-art-courses>
         <br>
         <div class="parallax5"></div>
-        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Drawing And Painting Program</h1>
+        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Social Studies <span>(3 Credits)</span></h1>
         <drawing-painting-courses></drawing-painting-courses>
         <br>
         <div class="parallax6"></div>
-        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Technology</h1>
+        <h1 class="wrapper" style="margin-top:1em; margin-bottom:0.5em;">Electives <span>(7 Credits)</span></h1>
         <tech-courses></tech-courses>
         <br>
+        <div class="wrapper card">
+          <div class="sector-text ">
+            <p>Also if you plan on Graduating with an Honors or Advanced Program diploma you must acquire the following to gradate:</p>
+            <p>**2 credits / years of foreign language is erquired to go to college regardless of your program of study or diploma.</p>
+            <div class="layout-horizontal">
+              <div class="layout-flex-1">
+            <h2>Honors Program</h2>
+                <ol>
+            <li>1. 13 of the 22 credits above must be Honors level (2 of which must be taken during your senior year)</li>
+            <li>2. 2 credits of your electives must be a Foreign Language (2 years of the same language)</li>
+            <li>3. Must have acumulative Grade point average of 2.5 or higher.</li>
+                </ol>
+              </div>
+              <div class="layout-flex-1">
+            <h2>Advanced Program</h2>
+                <ol>
+            <li>12 of the 22 credits above must be Advance Level (2 of which must be taken during your senior year)</li>
+            <li>2 credits of your electives must be a Foreign Language (2 years of the same language)</li>
+            <li>Must have acumulative Grade point average of 2.5 or higher.</li>
+                </ol>
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <prp-footer></prp-footer>

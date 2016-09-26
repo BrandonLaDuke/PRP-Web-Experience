@@ -3,6 +3,10 @@
   font-family: 'Product Sans', sans-serif;
 }
 
+h1 > span {
+  font-size: .5em;
+}
+
 .courses p,
 .courses h3 {
   padding: 10px 15px;
