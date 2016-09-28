@@ -48,7 +48,7 @@
     <app-drawer swipe-Open style="z-index:1;">
       <div style="height: 100%; overflow: auto;">
         <prp-nav></prp-nav>
-        <!-- PRP Navigation is a custom element served from "elements/prp-nav/prp-nav.html" -->
+        <!-- <prp-nav> is a custom element served from "elements/prp-nav/prp-nav.html" -->
       </div>
     </app-drawer>
     <app-header-layout>
@@ -58,11 +58,13 @@
           <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
           <div main-title>PRP High School</div>
           <nav-bar></nav-bar>
+          <!-- <nav-bar> is a custom element served from "elements/prp-nav/nav-bar.html" -->
           <span class="flex"></span>
         </app-toolbar>
       </app-header>
       <!-- Start Main Content -->
       <div class="site-content" style="margin-top:0px;"><!-- Directly state margin of 0px to keep header touching nav -->
+        <!-- Create a hero slider -->
         <section class="hero">
           <img src="images/carousel/PRP-Website-Banner.jpg" alt="PRP Banner" />
         </section>
