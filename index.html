@@ -77,10 +77,12 @@
                 <div id="blogger" class="text"></div>
                 <script>
                   function handleResponse(response) {
-                    document.getElementById("blogger").innerHTML += "<h1>" + response.items[0].title + "</h1>" + "<div>" + response.items[0].content + "</div>";
+                    document.getElementById("blogger").innerHTML += "<div id=\"A1\"><h1>" + response.items[0].title + "</h1>" + "<div>" + response.items[0].content + "</div></div>";
+                    /*document.getElementById("blogger").innerHTML += "<div id=\"A2\"><h1>" + response.items[1].title + "</h1>" + "<div>" + response.items[1].content + "</div></div>";
+                    document.getElementById("blogger").innerHTML += "<div id=\"A3\"><h1>" + response.items[2].title + "</h1>" + "<div>" + response.items[2].content + "</div></div>";*/
                   }
                 </script>
-                <script src="https://www.googleapis.com/blogger/v3/blogs/3902757048421313088/posts?fetchBodies=true&fetchImages=true&maxResults=1&callback=handleResponse&key=AIzaSyBAQcQQbVHdN4wFbxRT43LOyUaGTjXnfLU"></script>
+                <script src="https://www.googleapis.com/blogger/v3/blogs/3902757048421313088/posts?fetchBodies=true&fetchImages=true&callback=handleResponse&key=AIzaSyBAQcQQbVHdN4wFbxRT43LOyUaGTjXnfLU"></script>
               </div>
 
             </div>
@@ -184,6 +186,7 @@
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/ridgetalk.js"></script>
 </body>
 
 </html>

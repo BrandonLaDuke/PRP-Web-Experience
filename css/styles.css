@@ -36,6 +36,17 @@ body {
   flex: 1;
 }
 
+.fadein {
+  opacity: 0;
+  margin-top: 900px;
+  transition:  7s;
+}
+
+.contents.loaded .fadein {
+  opacity: 1;
+  margin-top: 0px;
+}
+
 footer {
   clear: both;
 }
@@ -181,32 +192,6 @@ Quick Menu Items
   width: 20%;
   margin-top: 10px;
 }
-
-
-/*#datesAndLinks {
-  padding-top: 10px;
-  color: #fff;
-  background-color: #F44336;
-}
-
-@media screen and (min-width: 1000px) {
-  #datesAndLinks {
-    clear: both;
-    width: 100%;
-    float: left;
-    display: inline-block;
-  }
-  @media screen and (min-width: 1300px) {
-    #datesAndLinks {
-      width: 100%;
-      margin-top: 5px;
-    }
-    #datesAndLinks a {
-      width: 49%;
-      display: inline-block;
-    }
-  }
-}*/
 
 paper-item {
   color: black;
