@@ -50,7 +50,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           display: block;
           --app-grid-columns: 4;
           --app-grid-gutter: 10px;
-          --app-grid-item-height: 250px;
           --app-grid-expandible-item-columns: 4;
           --paper-icon-button-ink-color: white;
         }
@@ -61,7 +60,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
 
         ul {
-          margin: 0;
           padding: 0;
           list-style: none;
         }
@@ -73,15 +71,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
 
         .item {
+          height: 250px;
           position: relative;
           background-color: white;
-          background-image: url();
           background-size: cover;
           background-position: center center;
         }
 
         .item:nth-child(5n + 1) {
-          @apply(--app-grid-expandible-item);
+          height: 30vmax;
+          @apply --app-grid-expandible-item;
         }
 
         .item-title {
@@ -114,13 +113,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <app-header-layout>
         <app-header condenses reveals effects="waterfall">
           <app-toolbar>
-            <div spacer title>Material responsive grid</div>
+            <div spacer main-title>Material responsive grid</div>
           </app-toolbar>
         </app-header>
         <div class="centered-container">
           <ul class="app-grid">
             <template is="dom-repeat" items="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
-              <li class="item" style="background-image: url(//lorempixel.com/800/800/nature/?i=[[item]]);">
+              <li class="item" style$="background-image: url(//lorempixel.com/800/800/nature/?i=[[item]]);">
                 <div class="item-title">Nature [[item]]</div>
               </li>
             </template>

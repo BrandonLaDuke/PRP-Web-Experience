@@ -1,192 +1,94 @@
-<!DOCTYPE html>
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Polymer Starter Kit">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-<head>
-  <title>PRP High School</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#F44336">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="icon" type="image/png" href="images/home/PRPcrest.png" />
-  <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
+    <title>Pleasure Ridge Park</title>
+    <meta name="description" content="Pleasure Ridge Park High School">
 
-  <!-- Polymer Custom Elements -->
-  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-  <link rel="import" href="bower_components/polymer/polymer.html">
-  <link rel="import" href="elements/elements.html">
-  <link rel="import" href="elements/ridge-talk.html">
+    <!--
+      If deploying to a non-root path, replace href="/" with the full path to the project root.
+      For example: href="/High/PleasureRidgePark/" if it is being served from
+      http://schools.jefferson.kyschools.us/High/PleasureRidgePark/
+    -->
+    <base href="/">
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" type="text/css" href="css/home.css">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico">
 
-  <!-- Themes -->
-  <link rel="stylesheet" type="text/css" href="css/light-theme.css">
-  <style is="custom-style" include="iron-flex iron-flex-alignment">
-    @media screen and (min-width:700px) {
-      .flex-horizontal-with-ratios {
-        @apply(--layout-horizontal);
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- See https://goo.gl/qRE0vM -->
+    <meta name="theme-color" content="#e80708">
+
+    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="PRP HS">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PRP HS">
+
+    <!-- Homescreen icons -->
+    <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
+
+    <!-- Tile icon for Windows 8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#e80708">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <script>
+      // Register the base URL
+      const baseUrl = document.querySelector('base').href;
+
+
+      // Load and register pre-caching Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register(baseUrl + 'service-worker.js');
+        });
       }
-      .flexchild {
-        @apply(--layout-flex);
+    </script>
+
+    <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <!-- Load your application shell -->
+    <link rel="import" href="src/prp-app.html">
+
+    <!-- Add any global styles for body, document, etc. -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        line-height: 1.5;
+        min-height: 100vh;
+        background-color: #eeeeee;
       }
-      .flex2child {
-        @apply(--layout-flex-2);
-      }
-      .flex3child {
-        @apply(--layout-flex-3);
-      }
-    }
-  </style>
-
-</head>
-
-<body style="min-height:100%;">
-  <app-drawer-layout fullbleed force-narrow>
-    <app-drawer swipe-Open style="z-index:1;">
-      <div style="height: 100%; overflow: auto;">
-        <prp-nav></prp-nav>
-        <!-- <prp-nav> is a custom element served from "elements/prp-nav/prp-nav.html" -->
-      </div>
-    </app-drawer>
-    <app-header-layout>
-
-      <app-header reveals>
-        <app-toolbar sticky>
-          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
-          <div main-title>PRP High School</div>
-          <nav-bar></nav-bar>
-          <!-- <nav-bar> is a custom element served from "elements/prp-nav/nav-bar.html" -->
-          <span class="flex"></span>
-        </app-toolbar>
-      </app-header>
-      <!-- Start Main Content -->
-      <div class="site-content" style="margin-top:0px;"><!-- Directly state margin of 0px to keep header touching nav -->
-        <!-- Create a hero slider -->
-        <section class="hero">
-          <img src="images/carousel/PRP-Website-Banner.jpg" alt="PRP Banner" />
-        </section>
-        <section class="wrapper">
-          <div class="flex-horizontal-with-ratios">
-            <div class="flexchild">
-              <div id="ridgeTalk">
-                <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
-                <img src="images/home/ridgetalk-logo.jpg" alt="Ridge Talk" />
-                <div id="blogger" class="text"></div>
-                <script>
-                  function handleResponse(response) {
-                    document.getElementById("blogger").innerHTML += "<div id=\"A1\"><h1>" + response.items[0].title + "</h1>" + "<div>" + response.items[0].content + "</div></div>";
-                    /*document.getElementById("blogger").innerHTML += "<div id=\"A2\"><h1>" + response.items[1].title + "</h1>" + "<div>" + response.items[1].content + "</div></div>";
-                    document.getElementById("blogger").innerHTML += "<div id=\"A3\"><h1>" + response.items[2].title + "</h1>" + "<div>" + response.items[2].content + "</div></div>";*/
-                  }
-                </script>
-                <script src="https://www.googleapis.com/blogger/v3/blogs/3902757048421313088/posts?fetchBodies=true&fetchImages=true&callback=handleResponse&key=AIzaSyBAQcQQbVHdN4wFbxRT43LOyUaGTjXnfLU"></script>
-              </div>
-
-            </div>
-            <div class="flexchild">
-              <div style="column-count:2;column-gap:0px;">
-                <div class="">
-                  <a href="#">
-                    <img src="images/home/Parent-Portal.jpg" alt="Parent Portal" />
-                  </a>
-                </div>
-                <div class="">
-                  <a href="#">
-                    <img src="images/home/library-button.jpg" alt="Library" />
-                  </a>
-                </div>
-                <div class="">
-                  <a href="#">
-                    <img src="images/home/prpcreative.png" alt="PRP Creative" />
-                  </a>
-                </div>
-                <div class="">
-                  <a href="#">
-                    <img src="images/home/pulse.jpg" alt="Pulse" />
-                  </a>
-                </div>
-              </div>
-
-              <div id="pantherMedia">
-                <div><img src="images/home/panthermedia-logo.jpg" alt="Panther Media" /></div>
-                <iframe width="100%;" height="270px" src="https://www.youtube.com/embed/videoseries?list=PL3uzMjHUG0jF_BsTVRp7EWkkDU1UIrGiu" frameborder="0" allowfullscreen></iframe>
-              </div>
-
-              <div id="dates_links">
-
-                <paper-material elevation="1" id="datesAndLinks">
-                  <h2 style="margin-top:8px; text-align:center;">Important Dates &amp; Links</h2>
-                  <hr>
-                  <div class="datesAndLinks">
-                    <a href="">
-                      <paper-item>Senior Newsletter - November / December</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>PRP Student Handbook</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>Registration Fees</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>Senior Newsletter - September</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>Attendance and School Activities</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>PRP's Library Website</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>PRP Pulse Student Magazine</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>School Report Card</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>JCPS Parent Portal</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>PRP Art Department</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>Suicide Prevention Letter</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>SBDM Minutes</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>JCPS Parent Portal</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>PRP PTSA</paper-item>
-                    </a>
-                    <a href="">
-                      <paper-item>Video: PRP It's My School</paper-item>
-                    </a>
-                  </div>
-                </paper-material>
-
-              </div>
-            </div>
-          </div>
-        </section>
-        <prp-footer></prp-footer>
-
-      </div>
-      <!-- End Main Content -->
-
-
-
-
-    </app-header-layout>
-  </app-drawer-layout>
-
-  <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript" src="js/ridgetalk.js"></script>
-</body>
-
+    </style>
+  </head>
+  <body>
+    <prp-app></prp-app>
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+    <!-- Built with love using Polymer Starter Kit -->
+  </body>
 </html>

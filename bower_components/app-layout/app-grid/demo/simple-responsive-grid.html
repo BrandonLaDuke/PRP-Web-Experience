@@ -44,7 +44,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
 
         ul {
-          margin: 0;
           padding: 0;
           list-style: none;
         }
@@ -65,7 +64,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         @media (min-width: 800px) {
           .item:nth-child(5n+1) {
-            @apply(--app-grid-expandible-item);
+            @apply --app-grid-expandible-item;
           }
         }
 
@@ -77,7 +76,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
 
           .item:nth-child(3n+1) {
-            @apply(--app-grid-expandible-item);
+            @apply --app-grid-expandible-item;
           }
         }
 
@@ -86,7 +85,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <h1>3 columns on large screens and 2 columns on small ones.</h1>
 
       <ul class="app-grid">
-        <template items="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]" is="dom-repeat">
+        <template is="dom-repeat" items="[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]">
           <li class="item"></li>
         </template>
       </ul>
