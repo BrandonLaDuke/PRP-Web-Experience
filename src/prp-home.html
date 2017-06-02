@@ -28,10 +28,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         position: absolute;
         max-width: 500px;
         padding: var(--gutter);
+        padding-bottom: 2em; /* To give space for the button */
         color: #ffffff;
         background-color: rgba(255,0,0,0.8);
         bottom: 0;
-        z-index: 1
+        z-index: 1;
+
+        /* Transitions */
+        transition: ease all 1000ms;
       }
       .feature-card h1 {
         margin: 0;
@@ -43,7 +47,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div class="feature-card">
         <h1>Hello World!</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#">Learn More</a>
+        <a button="primary" href="#">Learn More</a>
       </div>
     </div>
 
