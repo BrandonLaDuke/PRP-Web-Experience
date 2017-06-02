@@ -16,23 +16,54 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <style include="shared-styles">
       :host {
         display: block;
-
-        padding: 10px;
+      }
+      .featured-div {
+        background-image: url(../images/home/prp-fine-arts-building.jpg);
+        width: 100%; height: calc(100vh - 64px);
+        background-size: cover;
+        background-position: center;
+        z-index: -5;
+      }
+      .feature-card {
+        position: absolute;
+        max-width: 500px;
+        padding: var(--gutter);
+        color: #ffffff;
+        background-color: rgba(255,0,0,0.8);
+        bottom: 0;
+        z-index: 1
+      }
+      .feature-card h1 {
+        margin: 0;
+        color: #ffffff;
       }
     </style>
 
     <div class="featured-div">
-      <h1>Hello</h1>
+      <div class="feature-card">
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#">Learn More</a>
+      </div>
     </div>
 
     <div class="row">
       <div class="news">
-        
+kgv
       </div>
       <div class="quick-links">
 
       </div>
     </div>
+
+    <section class="feature-right">
+      <div class="f-img">
+
+      </div>
+      <div class="f-text">
+
+      </div>
+    </section>
 
   </template>
 
