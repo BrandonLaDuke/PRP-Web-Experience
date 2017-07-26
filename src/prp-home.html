@@ -17,57 +17,87 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       :host {
         display: block;
       }
-      .featured-div {
-        background-image: url(../images/home/prp-fine-arts-building.jpg);
-        width: 100%; height: calc(100vh - 64px);
-        background-size: cover;
-        background-position: center;
-        z-index: -5;
-      }
-      .feature-card {
-        position: absolute;
-        max-width: 500px;
-        padding: var(--gutter);
-        padding-bottom: 2em; /* To give space for the button */
-        color: #ffffff;
-        background-color: rgba(255,0,0,0.8);
-        bottom: 0;
-        z-index: 1;
-
-        /* Transitions */
-        transition: ease all 1000ms;
-      }
-      .feature-card h1 {
+      .hero {
+        display: block;
+        text-align: center;
+        width: auto; height: 200px;
+        background-color: #0f9d58;
         margin: 0;
+      }
+      .hero h1 {
+        margin: 0;
+      }
+      .quick-links-grid {
+        display: grid;
+        height: 200px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap:0.3em;
+      }
+      .quick-links-grid a {
+        background-position: center;
+        background-size: cover;
+      }
+      .important-dates-and-links {
+        display: block;
+      }
+      .important-dates-and-links .title {
+        display: flex;
+        height: 4em;
+        background-color: red;
+      }
+      .important-dates-and-links .title h1 {
+        margin: auto;
+        vertical-align: middle;
+        align-content: center;
+        align-items: center;
         color: #ffffff;
+      }
+      .important-dates-and-links a {
+        display: block;
+        text-decoration: none;
+        padding: 20px 10px;
+        background-color: inherit;
+        transition: ease all 500ms;
+      }
+      .important-dates-and-links a:hover {
+        background-color: #dddddd;
+      }
+      .footer {
+        display: grid;
       }
     </style>
 
-    <div class="featured-div">
-      <div class="feature-card">
-        <h1>Hello World!</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a button="primary" href="#">Learn More</a>
+    <div class="home-grid">
+      <header class="hero">
+        <h1>PRP High School</h1>
+      </header>
+      <div class="quick-links-grid">
+        <a href="#" style="background-image:url(/images/home/Parent-Portal.jpg);"></a>
+        <a href="#" style="background-image:url(/images/home/prpcreative.png);"></a>
+        <a href="#" style="background-image:url(/images/home/library-button.jpg);">Library</a>
+        <a href="#" style="background-image:url(/images/home/pulse.jpg);">PRP Pulse</a>
+      </div>
+      <div class="important-dates-and-links">
+        <div class="title">
+          <h1>Important Dates &amp; Links</h1>
+        </div>
+        <a href="#">Click here for the Daily Announcements</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
+        <a href="#">hgkuyg</a>
       </div>
     </div>
-
-    <div class="row">
-      <div class="news">
-kgv
-      </div>
-      <div class="quick-links">
-
-      </div>
-    </div>
-
-    <section class="feature-right">
-      <div class="f-img">
-
-      </div>
-      <div class="f-text">
-
-      </div>
-    </section>
 
   </template>
 

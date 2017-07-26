@@ -51,6 +51,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --paper-icon-button-ink-color: white;
       }
 
+      /* Main-content Grid */
+      .main-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 50px auto;
+      }
+      .main-grid .grid-content {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      /* Nav Grid */
+      .nav-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 50px;
+        /* Position as bottom nav bar */
+      }
+      .nav-bar a {
+        text-align: center;
+        display: flex;
+      }
+      .nav-bar a:hover {
+        background-color: red;
+      }
+      .nav-bar a span {
+        align-content: center;
+        margin: auto;
+      }
+
       .drawer-list {
         margin: 0 20px;
       }
@@ -89,24 +119,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <!-- Main content -->
       <app-header-layout has-scrolling-region>
+        <div class="main-grid">
+          <div class="grid-content">
+            <iron-pages
+                selected="[[page]]"
+                attr-for-selected="name"
+                fallback-selection="view404"
+                role="main">
+              <prp-home name="home"></prp-home>
+              <prp-view2 name="view2"></prp-view2>
+              <prp-view3 name="view3"></prp-view3>
+              <prp-view404 name="view404"></prp-view404>
+            </iron-pages>
+          </div>
 
-        <app-header slot="header" condenses reveals effects="waterfall">
-          <app-toolbar>
-            <paper-icon-button icon="prp-icons:menu" drawer-toggle></paper-icon-button>
-            <div main-title>Pleasure Ridge Park High School</div>
-          </app-toolbar>
-        </app-header>
-
-        <iron-pages
-            selected="[[page]]"
-            attr-for-selected="name"
-            fallback-selection="view404"
-            role="main">
-          <prp-home name="home"></prp-home>
-          <prp-view2 name="view2"></prp-view2>
-          <prp-view3 name="view3"></prp-view3>
-          <prp-view404 name="view404"></prp-view404>
-        </iron-pages>
+          <div class="nav-bar">
+            <a class="announcements-btn" name="ridgetalk" href="ridgetalk">
+              <span>Ridge Talk</span>
+            </a>
+            <a class="home-btn" name="home" href="home">
+              <span>Home</span>
+            </a>
+            <a class="panthermedia-btn" name="panthermedia" href="panthermedia">
+              <span>Panther Media</span>
+            </a>
+          </div>
+          <footer class="footer">
+            Brandon LaDuke | PRP HS
+          </footer>
+        </div>
       </app-header-layout>
     </app-drawer-layout>
   </template>
