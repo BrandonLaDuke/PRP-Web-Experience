@@ -22,6 +22,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: center;
         width: auto; height: 200px;
         background-color: #0f9d58;
+        background-position: center;
+        background-size: cover;
         margin: 0;
       }
       .hero h1 {
@@ -66,10 +68,87 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .footer {
         display: grid;
       }
+      .ridge-talk, .panther-media {
+        display: none;
+      }
+      @media screen and (min-width:600px) {
+        .quick-links-grid {
+          height: 100px; /* MAke another where its 150px in height */
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: auto;
+          grid-gap:0.3em;
+        }
+        .important-dates-and-links {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          grid-template-areas: "title title";
+        }
+        .important-dates-and-links .title {
+          grid-area: title;
+        }
+      }
+      @media screen and (min-width: 1000px) {
+        .ridge-talk, .panther-media {
+          display: block;
+        }
+        .home-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: auto;
+          grid-template-areas:
+            "nav-bar nav-bar nav-bar nav-bar"
+            "header header header header"
+            "quick-links-grid quick-links-grid quick-links-grid quick-links-grid"
+            "ridge-talk ridge-talk panther-media panther-media"
+            "ridge-talk ridge-talk important-dates-and-links important-dates-and-links";
+            grid-gap: 0.3em;
+        }
+        .hero {
+          grid-area: header;
+        }
+        .quick-links-grid {
+          grid-area: quick-links-grid;
+        }
+        .important-dates-and-links {
+          grid-area: important-dates-and-links;
+        }
+        .ridge-talk {
+          grid-area: ridge-talk;
+        }
+        .panther-media {
+          grid-area: panther-media;
+        }
+        iframe {
+          border: none;
+        }
+      }
+      @media screen and (min-width: 1300px) {
+        .home-grid {
+          display: grid;
+          grid-template-columns: 5% 2fr 2fr 1fr 1fr 5%;
+          grid-template-rows: auto;
+          grid-template-areas:
+            "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
+            ". header header quick-links-grid quick-links-grid ."
+            ". header header quick-links-grid quick-links-grid. "
+            ". ridge-talk panther-media important-dates-and-links important-dates-and-links ."
+            ". ridge-talk panther-media important-dates-and-links important-dates-and-links .";
+            grid-gap: 0.3em;
+        }
+        .hero {
+          height: 300px;
+        }
+        .quick-links-grid {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          height: 300px;
+        }
+      }
     </style>
 
     <div class="home-grid">
-      <header class="hero">
+      <header class="hero" style="background-image:url(/images/home/PRP-Website-Banner.jpg)">
         <h1>PRP High School</h1>
       </header>
       <div class="quick-links-grid">
@@ -83,19 +162,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <h1>Important Dates &amp; Links</h1>
         </div>
         <a href="#">Click here for the Daily Announcements</a>
+        <a href="#">hgkuyes56jh5ejg</a>
+        <a href="#">hgwsh4ukuyrhetjh5 g</a>
         <a href="#">hgkuyg</a>
+        <a href="#">hgkj5eje5jeuyg</a>
         <a href="#">hgkuyg</a>
+        <a href="#">hgku5sh5eje56jyg</a>
+        <a href="#">hgk56je5jhed56juyg</a>
+        <a href="#">hgsr6j4wukuyg</a>
+        <a href="#">hgks6jjuyg</a>
+        <a href="#">hg56je56uj5kuyg</a>
         <a href="#">hgkuyg</a>
-        <a href="#">hgkuyg</a>
-        <a href="#">hgkuyg</a>
-        <a href="#">hgkuyg</a>
-        <a href="#">hgkuyg</a>
-        <a href="#">hgkuyg</a>
-        <a href="#">hgkuyg</a>
-        <a href="#">hgkuyg</a>
-        <a href="#">hgkuyg</a>
-        <a href="#">hgkuyg</a>
-        <a href="#">hgkuyg</a>
+        <a href="#">hgeje5j6kuyg</a>
+        <a href="#">hgkuwsj6jsyg</a>
+      </div>
+      <div class="ridge-talk">
+        <iframe src="/scripts/ridge-talk.html" width="100%" height="100%"></iframe>
+
+      </div>
+      <div class="panther-media">
+        <div><img src="/images/home/panthermedia-logo.jpg" alt="Panther Media" /></div>
+        <iframe width="100%" height="300px" src="https://www.youtube.com/embed/videoseries?list=PL3uzMjHUG0jF_BsTVRp7EWkkDU1UIrGiu" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
 
