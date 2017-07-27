@@ -68,8 +68,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .footer {
         display: grid;
       }
-      .ridge-talk, .panther-media {
+      .panther-media {
         display: none;
+      }
+      @media screen and (max-width:999px) {
+        .ridge-talk {
+          height: 100vh;
+        }
       }
       @media screen and (min-width:600px) {
         .quick-links-grid {
@@ -181,7 +186,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       </div>
       <div class="panther-media">
-        <div><img src="/images/home/panthermedia-logo.jpg" alt="Panther Media" /></div>
+        <div style="padding:10px; background-color: #000000;"><img style="width:
+          100%;" src="/images/home/panthermedia-logo.jpg" alt="Panther Media" /></div>
         <iframe width="100%" height="300px" src="https://www.youtube.com/embed/videoseries?list=PL3uzMjHUG0jF_BsTVRp7EWkkDU1UIrGiu" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>

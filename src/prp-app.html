@@ -57,10 +57,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
+          "app-bar"
           "grid-content"
           "footer"
           "nav-bar";
 
+      }
+      .main-grid .app-bar {
+        grid-area: app-bar;
+        background-color: red;
+        padding: 1em;
+      }
+      .main-grid .app-bar a {
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 0.8px;
+        font-size: 1.2em;
       }
       .main-grid .grid-content {
 
@@ -120,13 +132,79 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       @media screen and (min-width:600px) {
         .main-grid {
           grid-template-areas:
+          "app-bar"
           "nav-bar"
           "grid-content"
           "footer";
         }
       }
+      @media screen and (max-width: 1299px) {
+        .home, .about, .academics, .athletics, .students, .staff, .parents, .counselors, .crest {
+          display: none;
+        }
+      }
       @media screen and (min-width: 1300px) {
-
+        .main-grid {
+          grid-template-areas:
+          "app-bar"
+          "grid-content"
+          "footer";
+        }
+        .nav-bar {
+          display: none;
+        }
+        .main-grid .app-bar {
+          display: grid;
+          grid-template-columns: 50px 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 50px;
+          grid-template-areas:
+            "ham nav-home nav-about nav-academics nav-athletics crest nav-students nav-staff nav-parents nav-counselors .";
+          background-color: #000000;
+          padding: 0;
+        }
+        .app-bar a {
+          margin:auto;
+          padding: 10px;
+          transition: ease all 500ms;
+        }
+        .app-bar a:hover {
+          background-color: red;
+        }
+        .prp-name {
+          display: none;
+        }
+        .ham {
+          grid-area: ham;
+        }
+        .crest {
+          grid-area: crest;
+        }
+        .crest img {
+          width: 70px;
+        }
+        .home {
+          grid-area: nav-home;
+        }
+        .about {
+          grid-area: nav-about;
+        }
+        .academics {
+          grid-area: nav-academics;
+        }
+        .athletics {
+          grid-area: nav-athletics;
+        }
+        .students {
+          grid-area: nav-students;
+        }
+        .staff {
+          grid-area: nav-staff;
+        }
+        .parents {
+          grid-area: nav-parents;
+        }
+        .counselors {
+          grid-area: nav-counselors;
+        }
       }
     </style>
 
@@ -151,6 +229,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <!-- Main content -->
       <app-header-layout has-scrolling-region>
         <div class="main-grid">
+          <div class="app-bar"> <!-- Grid -->
+            <paper-icon-button class="ham" icon="menu" drawer-toggle></paper-icon-button>
+            <a class="prp-name" href="#">Pleasure Ridge Park</a>
+            <a class="crest" href="#">
+              <img src="/images/home/PRPcrest.png" alt="Pleasure Ridge Park">
+            </a>
+            <a class="home" href="#">Home</a>
+            <a class="about" href="#">About Us</a>
+            <a class="academics" href="#">Academics</a>
+            <a class="athletics" href="#">athletics</a>
+            <a class="students" href="#">Students</a>
+            <a class="staff" href="#">Staff</a>
+            <a class="parents" href="#">Parents</a>
+            <a class="counselors" href="#">Counselors</a>
+          </div>
           <div class="grid-content">
             <iron-pages
                 selected="[[page]]"
