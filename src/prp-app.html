@@ -121,6 +121,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       footer {
         grid-area: footer;
+        border-top: 1em solid red;
       }
       @media screen and (max-width:599px) {
         .nav-bar {
@@ -235,14 +236,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <a class="crest" href="#">
               <img src="/images/home/PRPcrest.png" alt="Pleasure Ridge Park">
             </a>
-            <a class="home" href="#">Home</a>
-            <a class="about" href="#">About Us</a>
-            <a class="academics" href="#">Academics</a>
-            <a class="athletics" href="#">athletics</a>
-            <a class="students" href="#">Students</a>
-            <a class="staff" href="#">Staff</a>
-            <a class="parents" href="#">Parents</a>
-            <a class="counselors" href="#">Counselors</a>
+            <a class="home" href="home">Home</a>
+            <a class="about" href="about">About Us</a>
+            <a class="academics" href="academics">Academics</a>
+            <a class="athletics" href="athletics">athletics</a>
+            <a class="students" href="students">Students</a>
+            <a class="staff" href="staff">Staff</a>
+            <a class="parents" href="parents">Parents</a>
+            <a class="counselors" href="counselors">Counselors</a>
           </div>
           <div class="grid-content">
             <iron-pages
@@ -251,7 +252,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 fallback-selection="view404"
                 role="main">
               <prp-home name="home"></prp-home>
-              <prp-view2 name="view2"></prp-view2>
+              <prp-about name="about"></prp-about>
               <prp-view3 name="view3"></prp-view3>
               <prp-view404 name="view404"></prp-view404>
             </iron-pages>
@@ -269,7 +270,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </a>
           </div>
           <footer class="footer">
-            Brandon LaDuke | PRP HS
+            <a class="footer-phone" href="#">Call PRP</a>
+            <p>Pleasure Ridge Park High School</p>
+            <p>5901 Greenwood Road, Louisville, Kentucky 40258</p>
           </footer>
         </div>
       </app-header-layout>
