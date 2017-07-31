@@ -19,6 +19,192 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         padding: 10px;
       }
+      img {
+        width: 100%;
+      }
+      h2, h3 {
+        margin: 0.5em 0 0 0;
+      }
+      p {
+        margin-top: 0.5em;
+        font-size: 1.1em;
+      }
+      .fight-song, .alma-mater {
+        text-align: center;
+      }
+      .fight-song p, .alma-mater p {
+        font-size: 1.2em;
+        line-height: 2em;
+      }
+      .history a {
+        padding: 1em;
+        background-color: red;
+        color: #ffffff;
+        text-decoration: none;
+        display: inline-block;
+      }
+      @media screen and (min-width: 560px) {
+        .about-grid {
+          display: grid;
+          grid-gap: 0.5em;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: auto;
+          grid-template-areas:
+            "vision vision vision"
+            "mission mission mission"
+            "principal-img principal-note principal-note"
+            "history history history-img"
+            "advance-img advance-img advance-img"
+            "advance-program advance-program advance-program"
+            "fightsong-img fight-song fight-song"
+            "mascot-img mascot-img mascot-img"
+            "mascot mascot mascot"
+            "snowman-img snowman-img snowman-img"
+            "snowman-game snowman-game snowman-game"
+            "school-study-img school-study-img school-study-img"
+            "school-study school-study school-study"
+            "alma-mater alma-mater alma-img"
+            "heart-img heart-img heart-img"
+            "school-with-heart school-with-heart school-with-heart"
+        }
+        .vision {
+          grid-area: vision;
+        }
+        .mission {
+          grid-area: mission;
+        }
+        .principal-img {
+          grid-area: principal-img;
+        }
+        .principal-note {
+          grid-area: principal-note;
+        }
+        .history-img {
+          grid-area: history-img;
+        }
+        .history {
+          grid-area: history;
+        }
+        .advance-img {
+          grid-area: advance-img;
+        }
+        .advance-program {
+          grid-area: advance-program;
+        }
+        .fightsong-img {
+          grid-area: fightsong-img;
+        }
+        .fight-song {
+          grid-area: fight-song;
+        }
+        .mascot-img {
+          grid-area: mascot-img;
+        }
+        .mascot {
+          grid-area: mascot;
+        }
+        .snowman-img {
+          grid-area: snowman-img;
+        }
+        .snowman-game {
+          grid-area: snowman-game;
+        }
+        .school-study-img {
+          grid-area: school-study-img;
+        }
+        .school-study {
+          grid-area: school-study;
+        }
+        .alma-img {
+          grid-area: alma-img;
+        }
+        .alma-mater {
+          grid-area: alma-mater;
+        }
+        .heart-img {
+          grid-area: heart-img;
+        }
+        .school-with-heart {
+          grid-area: school-with-heart;
+        }
+      }
+      @media screen and (min-width: 560px) {
+        .about-grid {
+          display: grid;
+          grid-gap: 0.5em;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: auto;
+          grid-template-areas:
+            "vision vision mission mission"
+            "principal-img principal-img principal-note principal-note"
+            "history-img history-img advance-program advance-program"
+            "history history advance-img advance-img"
+            "fightsong-img fightsong-img fight-song fight-song"
+            "mascot-img mascot-img mascot mascot"
+            "snowman-img snowman-img snowman-game snowman-game"
+            "school-study-img school-study-img school-study school-study"
+            "alma-mater alma-mater alma-img alma-img"
+            "heart-img heart-img heart-img heart-img"
+            "school-with-heart school-with-heart school-with-heart school-with-heart"
+        }
+      }
+      @media screen and (min-width: 1100px) {
+        .about-grid {
+          display: grid;
+          grid-gap: 1em;
+          grid-template-columns: 3% 1fr 1fr 1fr 1fr 3%;
+          grid-template-rows: auto;
+          grid-template-areas:
+            ". vision vision mission mission ."
+            ". principal-img principal-note principal-note principal-note ."
+            ". history-img history history history  ."
+            ". advance-img advance-program advance-program fightsong-img ."
+            ". mascot-img mascot mascot fightsong-img ."
+            ". mascot-img mascot mascot fight-song ."
+            ". snowman-img snowman-game snowman-game fight-song ."
+            ". snowman-img snowman-game snowman-game alma-img ."
+            ". snowman-img snowman-game snowman-game alma-mater ."
+            ". school-study-img school-study-img heart-img heart-img ."
+            ". school-study school-study school-with-heart school-with-heart ."
+        }
+      }
+      @media screen and (min-width: 1500px) {
+        .about-grid {
+          display: grid;
+          grid-gap: 1em;
+          grid-template-columns: 3% 1fr 1fr 1fr 1fr 1fr 3%;
+          grid-template-rows: auto;
+          grid-template-areas:
+            ". vision vision mission mission fightsong-img ."
+            ". vision vision mission mission fight-song ."
+            ". principal-img principal-note principal-note principal-note fight-song ."
+            ". history-img history history history alma-img ."
+            ". history-img history history history alma-mater ."
+            ". advance-img advance-img advance-program advance-program alma-mater ."
+            ". mascot-img mascot-img mascot mascot  . ."
+            ". snowman-img snowman-game snowman-game snowman-game . ."
+            ". school-study-img school-study-img heart-img heart-img . ."
+            ". school-study school-study school-with-heart school-with-heart . ."
+        }
+      }
+      @media screen and (min-width: 1600px) {
+        .about-grid {
+          display: grid;
+          grid-gap: 1em;
+          grid-template-columns: 3% 1fr 1fr 1fr 1fr 1.5fr 3%;
+          grid-template-rows: auto;
+          grid-template-areas:
+            ". vision vision mission mission fightsong-img ."
+            ". principal-img principal-note principal-note principal-note fight-song ."
+            ". history-img history history history alma-img ."
+            ". history-img history history history alma-mater ."
+            ". advance-img advance-img advance-program advance-program alma-mater ."
+            ". mascot-img mascot-img mascot mascot  . ."
+            ". snowman-img snowman-game snowman-game snowman-game . ."
+            ". school-study-img school-study-img heart-img heart-img . ."
+            ". school-study school-study school-with-heart school-with-heart . ."
+        }
+      }
     </style>
 
     <div class="about about-grid">
@@ -31,26 +217,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <li>A place where young people grow to their potential and achieve at the highest levels.</li>
         </ul>
       </div>
-      <img class="mission" src="" alt="">
-      <img class="principal-img" src="" alt="">
+      <img class="mission" src="/images/about/mission.gif" alt="Our Mission">
+      <img class="principal-img" src="/images/about/Pic-Me.JPG" alt="">
       <div class="principal-note">
         <h2>Note from our Principal</h2>
         <p>As the Principal of PRP, I am looking forward to this school year more than any other in my career. I want to take this opportunity to introduce myself to you. I am a life-long south end resident and I bring a passion for education and a vision for continued growth and success to Pleasure Ridge Park. The PRP community is a uniquely close-knit group that stays involved with their schools. I want to assure you all that I, too, am devoted to PRP's success. Having worked at PRP as a teacher, a counselor, and an assistant principal, I have had the opportunity to see this wonderful school from a number of perspectives. It has been my good fortune to be a member of many great teams; I anticipate the PRP team to be the best. PRP is one offew remaining community schools. Let's keep that going! Rest assured that I value the long-standing traditions of PRP and that I will work to protect them.</p>
       </div>
-      <img class="history-img" src="" alt="">
+      <img class="history-img" src="/images/about/prp-in-1958.jpg" alt="PRP in 1958">
       <div class="history">
         <h2>Our History</h2>
         <p>The 2003-04 school year ushered in the future for PRP High School with a change in leadership. Principal David Johnson guided students and faculty toward success in academic and athletic pursuits. With 2 National Merit Semifinalists, 13 Governor’s Scholars, and more than 100 honor roll students, PRP students, faculty, and staff once again demonstrated their commitment to academic achievement.</p>
         <p>This brief summary cannot begin to cover all the memories that students have taken with them from their time at PRP High School. Fortunately, it does not have to serve that purpose; these memories are carried in the hearts of all true Panthers forever.</p>
         <a href="#">Explore more of our history</a>
       </div>
-      <img class="advance-img" src="" alt="">
+      <img class="advance-img" src="http://placehold.it/500x300" alt="">
       <div class="advance-program">
           <h2>Advance Program</h2>
           <h4>A program where challenges are met and leaders are made.</h4>
           <p>In 1959, PRP High School was selected as one of the five original centers for the Advance Program, a complete program that focuses on critical thinking, abstract reasoning, and self-expression. Seasoned teachers encourage gifted and talented students to reach their potential. The Advance Program students are challenged in the classroom and are accustomed to a rigorous curriculum that allows them to be successful in college.</p>
       </div>
-      <img class="fightsong-img" src="" alt="">
+      <img class="fightsong-img" src="/images/about/Band_trombones.jpg" alt="">
       <div class="fight-song">
         <h2>The Fight Song</h2>
         <p>We are the Panthers fierce and strong<br>
@@ -62,24 +248,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           Get in there now and WIN THIS GAME<br>
           So come on, you Panthers, FIGHT!</p>
       </div>
-      <img class="mascot-img" src="" alt="">
+      <img class="mascot-img" src="/images/about/panthermascot.png" alt="">
       <div class="mascot">
         <h2>Our Mascot: Why Panthers?</h2>
         <p>When PRP High School first opened in the fall of 1958, it was up to those first students, grades seven through nine, to vote on the school colors and mascot. In keeping with custom, the mascot had to begin with the same letter as the high school (for example, Butler Bears, Valley Vikings, Western Warriors, Doss Dragons). The choices that the student body came up with for the letter P were Pirates, Pythons, and Panthers.</p>
         <p>The winner was the Panther, and the school colors were red and black. And the Panther makes for a great mascot costume. After all, could we really sing along with a straight face if Joy (Mitchiner) Leathers ('62) had been forced to pen the words: "We are the Pythons thick and long of Pleasure Ridge High School..."</p>
       </div>
-      <img class="snowman-img" src="" alt="">
+      <img class="snowman-img" src="/images/about/snowman2016.jpg" alt="Snowman">
       <div class="snowman-game">
         <h2>The Snow Man Game</h2>
         <p>On November 4, 1966, during the school day, we had a little unexpected snow. The snow started falling, falling, and falling. By the time it ended, we had more than 13 inches of snow in one school day. It was during the football season, and the boys, coaches, and some fans had already arrived for the game when it was canceled because the field was covered with snow. They decided that the game would be rescheduled after the snow was gone, but boys being boys, they decided to play in the snow. They made very large snowballs, had snowball fights, and built large snowmen all along the field. When the game was finally played the next week, PRP won 33 to 6. Someone from the Valley side had purchased a plastic snowman that they presented to PRP for their victory.</p>
         <p>It did not stop there because some of the boys decided that they wanted to make a papier-mâché snowman to be given yearly to the winner of the PRP/Valley football game, putting the score on the snowman for each game played. Thus the snowman tradition was born. The last game was played in 1998, and now the snowman is resting comfortably at PRP with no plans of making a return trip down the highway anytime soon.</p>
       </div>
-      <img class="school-study-img" src="" alt="">
+      <img class="school-study-img" src="/images/about/ridge-news.jpeg" alt="Matt Dawson and Abby Anderson anchors for Ridge News">
       <div class="school-study">
         <h2>Schools of Study</h2>
         <p>Communication skills are in demand across occupations, according to a report on the fastest-growing careers by the U.S. Department of Labor. At PRP High School, courses are available in public speaking, radio and television production, stage and costume design, print media, graphic arts, and visual and performing arts. Students work in well-equipped, state-of-the-art studios. They get many chances to practice their craft and show off their skills. Whether they're painting, drawing, acting on stage, creating digital art, building a Website, writing a short story or novel, editing news articles, anchoring a broadcast, or directing a film, students receive both solid academic instruction and practical experience.</p>
       </div>
-      <img class="alma-img" src="" alt="">
+      <img class="alma-img" src="http://placehold.it/500x300" alt="">
       <div class="alma-mater">
         <h2>The Alma Mater</h2>
         <p>Praise to thee, our Alma Mater,<br>
@@ -95,7 +281,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           As we proudly honor thee:<br>
           Our Pleasure Ridge Park High School.</p>
       </div>
-      <img class="heart-img" src="" alt="">
+      <img class="heart-img" src="http://placehold.it/500x300" alt="">
       <div class="school-with-heart">
         <h2>A School With Heart</h2>
         <p>Pleasure Ridge Park high School stands out from other high schools because of its big heart—one that beats incessantly for its nineteen hundred students. PRP’s heart beats when a student answers a tough question in a class discussion or when a player hits a home run in a big game. Its heart beats when the special needs kids play Christmas Carols in the bell choir. It beats when one of its own sings better than he ever has in the school musical or when the PRP cheerleaders lead the crowd in “Let’s go Panthers”.</p>
